@@ -1,0 +1,477 @@
+<html lang="en">
+
+	<head>
+
+		<title>Spartaga</title>
+
+
+
+		<link rel='shortcut icon' type='image/x-icon' href='../images/FlatProfile_Max_NoBack_BW.png'/>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<script type="text/javascript" src="../js/velocity.min.js"></script>
+
+		<script type="text/javascript" src="../js/projectLogic.js"></script>
+
+
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+		<!-- CSS and JS -->
+
+		<link rel="stylesheet" href="../css/animate.min.css">
+
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+
+	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
+
+	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
+
+
+
+	 	<!-- jQuery is required by Materialize to function -->
+
+
+
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	    <script type="text/javascript" src="../js/materialize.min.js"></script>
+
+
+
+	</head>
+
+
+
+	<body>
+
+		<script>
+
+		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+
+		  	ga('create', 'UA-83745844-1', 'auto');
+
+		  	ga('send', 'pageview');
+
+		</script>
+
+		
+
+	    <!-- Header -->
+
+	    <a href="../index.html">
+
+	    	<img id="projectLogo" src="../images/FlatProfile_Max_NoBack_BW.png" alt="flat max">
+
+		</a>
+
+	    <div class="project-intro deep-purple darken-1 z-depth-1">
+
+	        <h1 class="grey-text text-lighten-5">Spartaga</h1>
+
+	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">Developer, Designer</h5>
+
+	    </div>
+
+
+
+		<div class="container">
+
+			<div class="row">
+
+
+
+				<!-- project content -->
+
+				<div class="col s12 m12 l12">
+
+					<div class="row">
+
+				    	<div class="col s12 m12 l12">
+
+				    		<img src="../images/spartagabanner.jpg" class="responsive-img" style="height:50%">
+
+					    </div>
+
+					</div>
+
+					<p><strong>About the Project:</strong></p>
+
+					<p>Spartaga is a virtual reality Bullet-Hell action arcade game inspired by titles such as Galaga, Ikaruga, and Geometry Wars. Our goal with Spartaga was to reimagine and redefine the Bullet-Hell/Shoot-em-up genre in VR. Spartaga released in August 2017 on Steam. </p>
+
+
+
+					<p><strong>My Roles:</strong></p>
+
+					<p>As of July 2017 House of How only had two full time employees, me being one of them. While we got help with a few things (mostly art!) from some small contract jobs and friends in the industry, a majority of the project was completed just by us. Because of this, I got to create and participate in a much bigger way than a college hire at a larger company would generally get to touch. Because of my degree in Human Computer Interaction, my initial role started largely in gameplay and UI design during the concept stage. However, since I had quite a bit of coding experience from college hobby games, I ended up migrating towards the backend once my boss laid down the scafolding of what would be Spartaga’s incredible architecture. This project was not only my first industry game I have ever taken from concept to launch, but also my first real role as a developer rather than just a designer. Having worked at Microsoft as developer and technical designer for 10 years, Russ McMackin (Founder of House of How) was an amazing mentor throughout the game's development and my role on this project has taken me from being a designer that knew a little about code, to a designer who can completely develop what he and others design using industry standard C# code. 
+
+					</p>
+
+					<p>I’ll go into a bit more detail below, but some of what I worked on in Spartaga was: Concept design, gameplay design, prototyping game mechanics, developing game mechanics, UI design and implementation, prototyping 3d enemy models, environment design, designing and developing enemy and Boss AI, level design, level architecture, achievement architecture, writing lots of other smaller utility classes and functions, and even marketing towards the end of the project. All in all, I am very happy to have worked at House of How right out of college. Not only did I get tons of developer and designer specific experience, but I also have a much better understanding of the game development process. This experience will be invaluable to future projects at House of How and anywhere else my career takes me.
+
+					</p>
+
+
+
+					<script>
+
+						$(document).ready(function () {
+
+			    			// Plugin initialization
+
+			    			$('.slider').slider({height: 500});
+
+						});
+
+					</script>
+
+
+
+					<p style="text-align: center;"><strong>Sketches</strong></p>
+
+					<!-- Sketches -->
+
+					<div class="row">
+
+				    	<div class="col s12 m6 l6">
+
+				    		<img src="../images/space_180map.jpg" class="responsive-img" style="height:50%">
+
+					    </div>
+
+					</div>
+
+
+
+					<p><strong>Accomplishing Design Goals:</strong></p>
+
+					<p>The most important part of the design in Geometry Wars is the enemies. There are many other important aspects of the game that create the exciting player experience, but the enemies always stood out the most to me. Each enemy has a clear and distinct visual and color-scheme, individual behaviors and telegraphs, sometimes sounds, and sometimes reactions. Their exacting consistency is what allows the player to get into a good flow and control the mass, by feeling the behavior of the crowd as a whole by seeing the major patterns and groupings of the enemies. </p> 
+
+					<p>Spartaga set out to do just that in VR, and here are the 3 goals we set at the beginning, our plan to do it, and how they went.
+
+					</p>
+
+
+
+					<p>1. Clean Base Mechanics- Be one of the cleanest VR games, but not too clean.</p>
+
+
+
+					<p>As much as we'd like to have the super clean mechanics of Geometry Wars, we had to accept we couldn't and shouldn’t be quite as clean. First because it’s hard to have incredibly consistent framerate in VR right now, but also because of comfort. People have less tolerance to play in VR for multi hour periods, so mastery of the game can't demand day long play sessions to really understand the flow.</p>
+
+
+
+					<p>With the relatively small number of VR devices right now, we wanted to make a relatively more casual title with more enemies and modes to experience rather than an extremely polished 5-6 enemies and single endless mode. That said, I’d wager it’s still one of the most hardcore games in VR right now. Having more enemy types allows us to play with interesting combinations and patterns more loosely without needing to get into an extremely high number of ships on-screen at once.</p>
+
+
+
+					<p>This also lead us to avoid things like using both hands, or summoning drones, because we wanted every player action to be very deliberate and controlled, where every situation is deterministically setup by the enemy type, and how you chose to react.</p>
+
+
+
+					<p>Since we have so much stuff we want the player to experience, and in a controlled method where they can learn it, we decided to hand build all of our levels rather than leave it to procedural waves. A good couple of months of my time on the project were spent doing this. I found that although it took longer, iteration was my best friend in this task. Each level had its own goal that we outlined beforehand (ie. introduce one new enemy and then show how it becomes more difficult when paired with a previous enemy). I went through about 4 major iterations of designing levels, testing them (first I tested them myself, then with coworkers, then with unaffiliated testers), and determining if they met the pre-determined requisites. By the end, I ended up with 32 levels that were fun, challenging, and replay-able for leaderboard placement. </p>
+
+
+
+					<p>Another major design aspect of the game was the combo system. In Spartaga, it adds another level of mastery and score to the flow. Every time you kill 4 ships in a row of a similar type, you gain a temporary powerup and a score boost. It was a small thought at first, but it ended up being a game-changer. It provides significant reason why you should observe the whole battlefield and carefully pick your targets. So, you'd kill 4 Tanks, then 4 Shooters, then maybe 8 Butterflies, etc. It made for a big challenge in level design though, because now we had to make sure every level was "4-able”. It was worth it though, as it also leads to interesting moments where the player sometimes waits for the 4th ship to spawn that they've already killed 3 of. They know it is coming and know what it’s worth, but it’s far safer to take the quick option and just kill what’s available. All of this is totally ignorable by a casual player, and yet for a master player can be what the whole game turns into, where they restart as soon as they mess up a combo as they go for the leaderboards and try to memorize a perfect kill order.</p>
+
+
+
+					<p>2. Clean Enemies</p>
+
+
+
+					<p>The enemies needed to be dangerous, but not overwhelming in groups. Every situation must be survivable, and based on your capacity to notice the flow. This means they need to have clear silhouettes, colors, telegraphs, and consistent patterns and speed. They also need to have ranges that they are more or less dangerous at, and move in predictable ways. We did this on a spreadsheet, where we literally graphed the distance they are dangerous at, and the elevation, across each level to make sure we had a mix that was ramping correctly over the 32 levels and wouldn’t cluster up too much. We have ships that demand you look down, and ships that demand you look up. Difficulty is easy to increase when we just force you to pay attention to multiple regions at once.</p>
+
+
+
+					<!-- spread sheet -->
+
+
+
+					<p>We also did stress tests on individual enemies to make sure they were fun in isolation. Some great stuff came out of this- there are quite a few enemies you can dodge with your eyes closed just by memorizing the telegraph sound patterns. The color of enemies also have some subtle language, which also lead to some interesting design decisions since similar-color is also the root of the combo system.</p>
+
+
+
+					<p>3. Modeable Gameplay</p>
+
+
+
+					<p>About 70% of the way through production our mechanics were getting clean enough, and we were starting to feel that if you really understood it deeply the game could become relatively easy. However, it could also be extremely difficult if you didn't. We had so much content that we really needed to let more casual players experience it all without just dumbing it down to where the hardcore players wouldn't get to see the challenge it turns into. We also didn’t want to just keeping adding more and more levels that were harder and harder, to where most players would eventually drop out and feel like they didn’t get to experience the whole game because it was too difficult.</p>
+
+
+
+					<p>So, we decided to turn the main playthrough of the game into 32 levels, where you could feel like you “beat it” if you just got through that. We made the main playthrough a bit easier than it had been before. Now the player got 3 lives and some ship upgrading so they could power themselves up a bit. It's still hard, and the player still has to be good to reach the end, but they can also beat the game without having to understand the some of the more intricate mechanics 100%.</p>
+
+
+
+					<p>Then it became up to the alternate modes to really show the design. I won't describe all of the different playmodes here, but they accomplish taking the difficulty up a notch or two while not being required to complete the game. They work very well as an added challenge for our more hardcore players, since that is originally how we envisioned the game being played.</p>
+
+<!--
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/space_SelectLevel.gif" class="responsive-img" alt="Select level" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Select a level by hovering over it and pulling the trigger button.</p>
+
+						</div>
+
+					</div>
+
+					<br>
+
+					<br>
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/space_SwitchLevel.gif" class="responsive-img" alt="Throwing selection" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>The user can also grab their selection and move it to where they want it. Selecting a different level will expand it and shrink whatever was previously selected.</p>
+
+						</div>
+
+					</div>
+
+					-->
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<!-- Other Pages -->
+
+		<div class="grey lighten-2">
+
+			<div class="container links" id="links">
+
+			    <div class="row">
+
+
+
+				    <!--Spartaga-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spartaga</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				    
+
+			    	<!--Space-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="space">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Wizard-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="wizard">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spell Prototypes</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Kayak-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="kayak">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Kayak Simulator</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Bellhapp-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Bellhapp</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Fragments-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="fragments">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Fragments</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Hackathon-->
+
+			        <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--LunarLander-->
+
+				    <!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Lunar Lander</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+
+
+				    <!--IMADatavis-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">IMA Datavis</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Quadcopter-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
+
+			    			<a href="projects/quadcopter.html"><div></div></a>
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Quadcopter Controls</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				</div>
+
+		    </div>
+
+		</div>
+
+
+
+		<footer class="deep-purple darken-1">
+
+	      	<div class="footer-copyright">
+
+	        	<div class="container">
+
+	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
+
+	        	</div>
+
+	      	</div>
+
+	    </footer>
+
+	</body>
+
+</html>
