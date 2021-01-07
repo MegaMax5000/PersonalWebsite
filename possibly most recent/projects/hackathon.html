@@ -1,249 +1,497 @@
-<html lang="en">
-	<head>
-		<title>VR Hackathon</title>
-
-		<link rel='shortcut icon' type='image/x-icon' href='../images/FlatProfile_Max_NoBack_BW.png'/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script type="text/javascript" src="../js/velocity.min.js"></script>
-		<script type="text/javascript" src="../js/projectLogic.js"></script>
-
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<!-- CSS and JS -->
-		<link rel="stylesheet" href="../css/animate.min.css">
-		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
-	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
-
-	 	<!-- jQuery is required by Materialize to function -->
-
-	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	    <script type="text/javascript" src="../js/materialize.min.js"></script>
-
-	</head>
-
-	<body>
-		<script>
-		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  	ga('create', 'UA-83745844-1', 'auto');
-		  	ga('send', 'pageview');
-		</script>
-		
-	    <!-- Header -->
-	    <a href="../index.html">
-	    	<img id="projectLogo" src="../images/FlatProfile_Max_NoBack_BW.png" alt="flat max">
-		</a>
-	    <div class="project-intro deep-purple darken-1 z-depth-1">
-	        <h1 class="grey-text text-lighten-5">VR Hackathon</h1>
-	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">Game designer, UX Designer, Environment artist, UX Researcher</h5>
-	    </div>
-
-		<div class="container">
-			<div class="row">
-
-				<!-- project content -->
-				<div class="col s12 m12 l12">
-					<p><strong>What is the Seattle Virtual Reality Hackathon?</strong></p>
-					<p>The purpose of a hackathon is for a group of people to get together and create something (could be an mobile app, a robot, a webpage, etc.) in a set amount of time. The Seattle Virtual Reality Hackathon was a 24 hour event where programmers, designers, and makers all got together to create a project based around virtual and augmented reality technology. What each group made was completely up to them and their ideas, but they had to have something finished for judging by the end of the 24 hours.
-					</p>
-					<p><strong>The Team:</strong></p>
-					<p>Our team grew to be 9 people:
-					</p>
-					<p>
-					3 developers
-					</p>
-					<p>
-					2 artists
-					</p>
-					<p>
-					2 level/UX designers
-					</p>
-					<p>
-					1 sound designer
-					</p>
-					<p>
-					1 producer (although many took a leadership role)
-					</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l">
-							<img src="../images/project3_team.jpg" class="responsive-img img-centered" alt="Our team minus one producer (who took the picture)" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p><strong>Motivation:</strong></p>
-					<p>My team went into this project knowing that we wanted to create a co-operative VR (virtual reality) game for the Oculus headset. Many of us have experience in game development (ranging from a hobby to a mobile game developer for an actual studio) so we thought this would be the best project for the group. The game we made was called Pillars of Unity, since we only had enough time to make the characters pill shaped and the game was created with Unity 3d. The game was played by two players, each using their own computer and Oculus headset, where each player could see certain objects in the game that the other could not. For example if there was a red bridge in the game, then only the red player would be able to see it. This allowed us to explore the communication between players as the main obstacle in the game.
-					</p>
-					<p>
-					Our gamed was mentioned here: <a href="http://www.geekwire.com/2015/vr-hackathon-projects-demonstrate-emerging-value-of-virtual-reality/">http://www.geekwire.com/2015/vr-hackathon-projects-demonstrate-emerging-value-of-virtual-reality/</a>
-					</p>
-					<p>
-					search for “Pillars of Unity”
-					</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l">
-							<img src="../images/project3_player1.png" class="responsive-img img-centered" alt="Play Test" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l">
-							<img src="../images/project3_player2.png" class="responsive-img img-centered" alt="Play Test, the kids loved it!" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p>Although we had an idea of the data we were able to use from our interviews with the IMA staff, we could not actually get our hands on the data until after we generated some design ideas. After our sketches, we formatted the data to a more Tableau-friendly format and started exploring the data and what design ideas were actually possible within Tableau. After exploring the data we made a couple big changes to our project. We were previously interested in including a way to observe changes in attendance based on the weather. However, once we got both datasets into Tableau, we saw that there was really no interesting correlation. The main change that we made was deciding on creating two tools, one for administrative use and one for patron use. After talking to both administrative and patron stakeholders and seeing the actual data that we had, we saw that the administration and patrons had different goals. The administration wanted a higher-level look at the attendance and demographic paterns on a quaterly-yearly scale, while the patrons expressed more interest on planning their workout times on a daily level. After exploring the data, we saw that we could definitely use this data to meet each stakeholders needs separately. We brought our first iteration to an end by prototyping two fully interactive and testable tools in Tableau.
-					</p>
-					<p><strong>Design Process:</strong></p>
-					<p>Although we knew we wanted to make a co-operative VR game, we had no idea what the actual game would consist of. There were four designers on the team, including myself, and we spent the first three hours of our 24 hour period deciding on where we wanted to go with our game while the developers set up the networking and game mechanics. Our first step in the design process was to go through a quick brainstorm of ideas for the environment that the game would take place in. This consisted of the four of us writing as many ideas as we could on sticky notes for about 2 minutes and then talking about them for the next 15. I found out just how different each of the designers was during this process and saw how it worked to worked to our advantage. In 2 minutes we came up with about 20 sticky notes, and almost all of them were different. After about 15 minutes we narrowed it down to about 5 options through combining and changing ideas.
-					</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l">
-							<img src="../images/project3_sticky.png" class="responsive-img" alt="Stickynote brainstorming" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p>Our next step was to take a few more minutes of brainstorming individually in order to come up with this games “gimmick” or what would make it different and stand out. We spent a bit longer discussing this after the brainstorm, but we eventually decided on something we liked. The difficult about this step was trying to predict our user’s feelings about the game based on our own experiences. We obviously could not conduct any research during this step since we were still deciding on what we wanted to make. Instead we tried to get our idea as user friendly as we could for now, knowing that we would conduct extensive user testing throughout the project. Our choice also narrowed down our environment options a bit more, so we chose the one we like the most and started to design some levels.
-					</p>
-					<p>
-					Everyone in the design group had experience playing games and interacting with environments in a virtual setting. In order to get some ideas going for level design and different obstacles and puzzles the players might encounter, we did one more brainstorm for a few minutes. After the brainstorm, we again discussed our ideas and explored where they might lead. Since we had very limited time in the hackathon, one other designer and I broke off from the level designing halfway through to start looking for and creating textures and game assets. Since we did not have a graphic or 3d artist, it fell on us to figure out how to do this. This took a bit longer than we had hoped, but we were also still being as active as we could be in the level design which slowed us down.
-					</p>
-					<p>
-					After a the first two levels layouts were designed, me and another designer broke off completely to start setting up the game environment and level layout using tools like Maya and Unity3d while the other two designers designed level three. I took breaks from maya and Unity in order to sit in on the level 3 design process and listen to and give ideas. While many hackers will stay up through the night, we decided to get some sleep and start hacking again in the morning. By the end of the first night (about 14 hours in) we had finished the design for the first three levels, put together the actual environment and level for level 1 and 2, and had a completely playable and finished level 1.
-					</p>
-					<p>
-					There were things that we designed that we later realized felt weird in VR. For example, both of the levels require players to communicate to each other how many spaces they need to move up, down, left, and right along a path. But, in VR, it was tricky to even identify how many spaces there were because the depth of view skewed the spaces far away.
-					</p>
-					<p>
-					We had about 7 hours left for hacking in the second day when we got started. We decided that the designers would finish setting up level 3, and begin user testing on level 1. The user testing was pretty rushed, but it allowed for iteration on the design and game mechanics of level 1. We did not have a large pool of potential users to pull from, so we ended up testing it on other members of our team and other hackers in the event. We got some good feedback after watching people play our game, and made as many changes as we could in the allotted time. Our team eventually got level 2 and three up and running, so we made sure to test these levels as well. We had just enough time before the end of the hackathon finish testing and make some changes to each of the three levels of the game before judging.
-					</p>
-					<p><strong>Evaluation and Future Plans:</strong></p>
-					<p>In the end we won second place, and had a great time. I had not met over half of the team before working on this project, so it was great to meet so many new people interested in game design and VR. We plan on getting together sometime soon and polishing up the game and putting it through some more user testing. It was pretty difficult to stick to all of the design principles and strategies that I learned when we were rushed so much by the time limit. But we did our best, and it turned out to make us get so much more out of the process than we would have otherwise.
-					</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l">
-							<img src="../images/project3_award.png" class="responsive-img" alt="Our award :)" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		<!-- Other Pages -->
-		<div class="grey lighten-2">
-			<div class="container links" id="links">
-			    <div class="row">
-
-			    	<!--Virtual Phone-->
-			    	<!-- <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="vp">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Virtual Phone</h3>
-			    			</div>
-			    		</div>
-				    </div> -->
-
-				    <!--Spartaga-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Spartaga</h3>
-			    			</div>
-			    		</div>
-				    </div>
-				    
-			    	<!--Space-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="space">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Wizard-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="wizard">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Spell prototypes</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Kayak-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="kayak">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Kayak Simulator</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Bellhapp-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Bellhapp</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Fragments-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="fragments">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Fragments</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Hackathon-->
-			        <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--LunarLander-->
-				    <!-- <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Lunar Lander</h3>
-			    			</div>
-			    		</div>
-				    </div> -->
-
-				    <!--IMADatavis-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">IMA Datavis</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Quadcopter-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
-			    			<a href="projects/quadcopter.html"><div></div></a>
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Quadcopter Controls</h3>
-			    			</div>
-			    		</div>
-				    </div>
-				</div>
-		    </div>
-		</div>
-
-		<footer class="deep-purple darken-1">
-	      	<div class="footer-copyright">
-	        	<div class="container">
-	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
-	        	</div>
-	      	</div>
-	    </footer>
-	</body>
+<html lang="en">
+
+	<head>
+
+		<title>VR Hackathon</title>
+
+
+
+		<link rel='shortcut icon' type='image/x-icon' href='../images/maxface.png'/>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<script type="text/javascript" src="../js/velocity.min.js"></script>
+
+		<script type="text/javascript" src="../js/projectLogic.js"></script>
+
+
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+		<!-- CSS and JS -->
+
+		<link rel="stylesheet" href="../css/animate.min.css">
+
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+
+	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
+
+	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
+
+
+
+	 	<!-- jQuery is required by Materialize to function -->
+
+
+
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	    <script type="text/javascript" src="../js/materialize.min.js"></script>
+
+
+
+	</head>
+
+
+
+	<body>
+
+		<script>
+
+		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+
+		  	ga('create', 'UA-83745844-1', 'auto');
+
+		  	ga('send', 'pageview');
+
+		</script>
+
+		
+
+	    <!-- Header -->
+
+	    <a href="../index.html">
+
+	    	<img id="projectLogo" src="../images/maxface.png" alt="flat max">
+
+		</a>
+
+	    <div class="project-intro deep-purple darken-1 z-depth-1">
+
+	        <h1 class="grey-text text-lighten-5">VR Hackathon</h1>
+
+	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">Game designer, UX Designer, Environment artist, UX Researcher</h5>
+
+	    </div>
+
+
+
+		<div class="container">
+
+			<div class="row">
+
+
+
+				<!-- project content -->
+
+				<div class="col s12 m12 l12">
+
+					<p><strong>What is the Seattle Virtual Reality Hackathon?</strong></p>
+
+					<p>The purpose of a hackathon is for a group of people to get together and create something (could be an mobile app, a robot, a webpage, etc.) in a set amount of time. The Seattle Virtual Reality Hackathon was a 24 hour event where programmers, designers, and makers all got together to create a project based around virtual and augmented reality technology. What each group made was completely up to them and their ideas, but they had to have something finished for judging by the end of the 24 hours.
+
+					</p>
+
+					<p><strong>The Team:</strong></p>
+
+					<p>Our team grew to be 9 people:
+
+					</p>
+
+					<p>
+
+					3 developers
+
+					</p>
+
+					<p>
+
+					2 artists
+
+					</p>
+
+					<p>
+
+					2 level/UX designers
+
+					</p>
+
+					<p>
+
+					1 sound designer
+
+					</p>
+
+					<p>
+
+					1 producer (although many took a leadership role)
+
+					</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l">
+
+							<img src="../images/project3_team.jpg" class="responsive-img img-centered" alt="Our team minus one producer (who took the picture)" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p><strong>Motivation:</strong></p>
+
+					<p>My team went into this project knowing that we wanted to create a co-operative VR (virtual reality) game for the Oculus headset. Many of us have experience in game development (ranging from a hobby to a mobile game developer for an actual studio) so we thought this would be the best project for the group. The game we made was called Pillars of Unity, since we only had enough time to make the characters pill shaped and the game was created with Unity 3d. The game was played by two players, each using their own computer and Oculus headset, where each player could see certain objects in the game that the other could not. For example if there was a red bridge in the game, then only the red player would be able to see it. This allowed us to explore the communication between players as the main obstacle in the game.
+
+					</p>
+
+					<p>
+
+					Our gamed was mentioned here: <a href="http://www.geekwire.com/2015/vr-hackathon-projects-demonstrate-emerging-value-of-virtual-reality/">http://www.geekwire.com/2015/vr-hackathon-projects-demonstrate-emerging-value-of-virtual-reality/</a>
+
+					</p>
+
+					<p>
+
+					search for “Pillars of Unity”
+
+					</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l">
+
+							<img src="../images/project3_player1.png" class="responsive-img img-centered" alt="Play Test" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l">
+
+							<img src="../images/project3_player2.png" class="responsive-img img-centered" alt="Play Test, the kids loved it!" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p>Although we had an idea of the data we were able to use from our interviews with the IMA staff, we could not actually get our hands on the data until after we generated some design ideas. After our sketches, we formatted the data to a more Tableau-friendly format and started exploring the data and what design ideas were actually possible within Tableau. After exploring the data we made a couple big changes to our project. We were previously interested in including a way to observe changes in attendance based on the weather. However, once we got both datasets into Tableau, we saw that there was really no interesting correlation. The main change that we made was deciding on creating two tools, one for administrative use and one for patron use. After talking to both administrative and patron stakeholders and seeing the actual data that we had, we saw that the administration and patrons had different goals. The administration wanted a higher-level look at the attendance and demographic paterns on a quaterly-yearly scale, while the patrons expressed more interest on planning their workout times on a daily level. After exploring the data, we saw that we could definitely use this data to meet each stakeholders needs separately. We brought our first iteration to an end by prototyping two fully interactive and testable tools in Tableau.
+
+					</p>
+
+					<p><strong>Design Process:</strong></p>
+
+					<p>Although we knew we wanted to make a co-operative VR game, we had no idea what the actual game would consist of. There were four designers on the team, including myself, and we spent the first three hours of our 24 hour period deciding on where we wanted to go with our game while the developers set up the networking and game mechanics. Our first step in the design process was to go through a quick brainstorm of ideas for the environment that the game would take place in. This consisted of the four of us writing as many ideas as we could on sticky notes for about 2 minutes and then talking about them for the next 15. I found out just how different each of the designers was during this process and saw how it worked to worked to our advantage. In 2 minutes we came up with about 20 sticky notes, and almost all of them were different. After about 15 minutes we narrowed it down to about 5 options through combining and changing ideas.
+
+					</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l">
+
+							<img src="../images/project3_sticky.png" class="responsive-img" alt="Stickynote brainstorming" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p>Our next step was to take a few more minutes of brainstorming individually in order to come up with this games “gimmick” or what would make it different and stand out. We spent a bit longer discussing this after the brainstorm, but we eventually decided on something we liked. The difficult about this step was trying to predict our user’s feelings about the game based on our own experiences. We obviously could not conduct any research during this step since we were still deciding on what we wanted to make. Instead we tried to get our idea as user friendly as we could for now, knowing that we would conduct extensive user testing throughout the project. Our choice also narrowed down our environment options a bit more, so we chose the one we like the most and started to design some levels.
+
+					</p>
+
+					<p>
+
+					Everyone in the design group had experience playing games and interacting with environments in a virtual setting. In order to get some ideas going for level design and different obstacles and puzzles the players might encounter, we did one more brainstorm for a few minutes. After the brainstorm, we again discussed our ideas and explored where they might lead. Since we had very limited time in the hackathon, one other designer and I broke off from the level designing halfway through to start looking for and creating textures and game assets. Since we did not have a graphic or 3d artist, it fell on us to figure out how to do this. This took a bit longer than we had hoped, but we were also still being as active as we could be in the level design which slowed us down.
+
+					</p>
+
+					<p>
+
+					After a the first two levels layouts were designed, me and another designer broke off completely to start setting up the game environment and level layout using tools like Maya and Unity3d while the other two designers designed level three. I took breaks from maya and Unity in order to sit in on the level 3 design process and listen to and give ideas. While many hackers will stay up through the night, we decided to get some sleep and start hacking again in the morning. By the end of the first night (about 14 hours in) we had finished the design for the first three levels, put together the actual environment and level for level 1 and 2, and had a completely playable and finished level 1.
+
+					</p>
+
+					<p>
+
+					There were things that we designed that we later realized felt weird in VR. For example, both of the levels require players to communicate to each other how many spaces they need to move up, down, left, and right along a path. But, in VR, it was tricky to even identify how many spaces there were because the depth of view skewed the spaces far away.
+
+					</p>
+
+					<p>
+
+					We had about 7 hours left for hacking in the second day when we got started. We decided that the designers would finish setting up level 3, and begin user testing on level 1. The user testing was pretty rushed, but it allowed for iteration on the design and game mechanics of level 1. We did not have a large pool of potential users to pull from, so we ended up testing it on other members of our team and other hackers in the event. We got some good feedback after watching people play our game, and made as many changes as we could in the allotted time. Our team eventually got level 2 and three up and running, so we made sure to test these levels as well. We had just enough time before the end of the hackathon finish testing and make some changes to each of the three levels of the game before judging.
+
+					</p>
+
+					<p><strong>Evaluation and Future Plans:</strong></p>
+
+					<p>In the end we won second place, and had a great time. I had not met over half of the team before working on this project, so it was great to meet so many new people interested in game design and VR. We plan on getting together sometime soon and polishing up the game and putting it through some more user testing. It was pretty difficult to stick to all of the design principles and strategies that I learned when we were rushed so much by the time limit. But we did our best, and it turned out to make us get so much more out of the process than we would have otherwise.
+
+					</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l">
+
+							<img src="../images/project3_award.png" class="responsive-img" alt="Our award :)" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+				</div>
+
+
+
+			</div>
+
+		</div>
+
+
+
+		<!-- Other Pages -->
+
+		<div class="grey lighten-2">
+
+			<div class="container links" id="links">
+
+			    <div class="row">
+
+
+
+			    	<!--Virtual Phone-->
+
+			    	<!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="vp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Virtual Phone</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+
+
+				    <!--Spartaga-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spartaga</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				    
+
+			    	<!--Space-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="space">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Wizard-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="wizard">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spell prototypes</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Kayak-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="kayak">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Kayak Simulator</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Bellhapp-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Bellhapp</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Fragments-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="fragments">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Fragments</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Hackathon-->
+
+			        <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--LunarLander-->
+
+				    <!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Lunar Lander</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+
+
+				    <!--IMADatavis-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">IMA Datavis</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Quadcopter-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
+
+			    			<a href="projects/quadcopter.html"><div></div></a>
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Quadcopter Controls</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				</div>
+
+		    </div>
+
+		</div>
+
+
+
+		<footer class="deep-purple darken-1">
+
+	      	<div class="footer-copyright">
+
+	        	<div class="container">
+
+	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
+
+	        	</div>
+
+	      	</div>
+
+	    </footer>
+
+	</body>
+
 </html>

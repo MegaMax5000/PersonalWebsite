@@ -1,228 +1,455 @@
-<html lang="en">
-	<head>
-		<title>Space Game</title>
-
-		<link rel='shortcut icon' type='image/x-icon' href='../images/FlatProfile_Max_NoBack_BW.png'/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script type="text/javascript" src="../js/velocity.min.js"></script>
-		<script type="text/javascript" src="../js/projectLogic.js"></script>
-
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<!-- CSS and JS -->
-		<link rel="stylesheet" href="../css/animate.min.css">
-		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
-	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
-
-	 	<!-- jQuery is required by Materialize to function -->
-
-	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	    <script type="text/javascript" src="../js/materialize.min.js"></script>
-
-	</head>
-
-	<body>
-		<script>
-		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  	ga('create', 'UA-83745844-1', 'auto');
-		  	ga('send', 'pageview');
-		</script>
-		
-	    <!-- Header -->
-	    <a href="../index.html">
-	    	<img id="projectLogo" src="../images/FlatProfile_Max_NoBack_BW.png" alt="flat max">
-		</a>
-	    <div class="project-intro deep-purple darken-1 z-depth-1">
-	        <h1 class="grey-text text-lighten-5">"Space Game" Level Select</h1>
-	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">UX/UI Designer, Developer</h5>
-	    </div>
-
-		<div class="container">
-			<div class="row">
-
-				<!-- project content -->
-				<div class="col s12 m12 l12">
-					<p><strong>Motivation:</strong></p>
-					<p>Having designed for web/phone UIs and recently starting my journey as a VR developer/designer, I wanted to pair my past experience with my new experience. My goal was to design and prototype a novel level select/navigation UI in VR. The motivation behind the design was to create something that couldn't be done with a 2d interface and in such a way that it “wowed” the user. Many VR games right now seem to just take their 2d UIs and throw them onto floating walls. I'll admit that I initially thought that would be a solid solution to this problem, but I am much happier with what I came up with after a bit more thought.</p>
-
-					<p><strong>Design:</strong></p>
-					<p>My initial sketches portrayed a 2d map projected onto either a flat wall. The player would select levels by using the Vive’s trigger to “click”. This would then have popped the level off of the map and expanded it to show additional information. The player would then click start and begin the level. While this would be an effective and intuitive approach, I thought that there had to be a better use of the new VR technology. I knew that the way the game was set up required some sort of VR equivalent to the 2d map, but I refused to just create a 2d interface in a VR environment. I started to sketch a version of the map that wrapped around the player. While this took advantage of the Vive’s 360 player immersion, it still was too similar to the standard map interface.</p>
-
-					<script>
-						$(document).ready(function () {
-			    			// Plugin initialization
-			    			$('.slider').slider({height: 500});
-						});
-					</script>
-
-					<p style="text-align: center;"><strong>Sketches</strong></p>
-					<!-- Sketches -->
-					<div class="row">
-				    	<div class="col s12 m6 l6">
-				    		<img src="../images/space_180map.jpg" class="responsive-img" style="height:50%">
-					    </div>
-					    <div class="col s12 m6 l6">
-					    	<img src="../images/space_360map.jpg" class="responsive-img" style="height:50%"> 
-					    </div>
-					    <div class="col s12 m6 l6">
-					    	<img src="../images/space_sketch1.jpg" class="responsive-img" style="height:50%"> 
-					    </div>
-					    <div class="col s12 m6 l6">
-					    	<img src="../images/space_sketch2.jpg" class="responsive-img" style="height:50%"> 
-					    </div>
-					</div>
-
-					<p>My solution hit me when I realized that I was trying to map a universe on a 2d plane. That didn’t make any sense! The universe’s element of depth allowed me to actually stick the player inside of the map instead of having them look at it as they would a standard map. This is something that VR was made for, and so I got to work on the development of this idea.</p>
-
-					<p><strong>Development:</strong></p>
-					<p>I developed the prototype in Unity using C#. My goal was to have solar systems floating around the player that they could zoom in on upon selection. My first step was the equivalent of wireframing an app or website. I used grey artless boxes as solar systems until I made the interactions feel good and fun to do without even looking that amazing. I had to implement the button architecture since the Unity store did not have prebuilt assets that matched what I was doing. Once the buttons were working, I added the zooming/selection animation. There was a bit of vector math involved here. I basically drew a vector from the selected button to each of the other buttons, and then moved the other buttons along that vector a certain distance while centering and enlarging the selected button.</p>
-
-					<p>Once I was done with the animations and the interactions felt fun to play with, I decided that I wanted to make it look good. I grabbed a few low poly planets from the Unity asset store, created some simple sun and star sphere particle effects, and transformed each of the grey boxes into little solar systems.</p>
-
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m12 l12">
-							<img src="../images/space_SelectLevel.gif" class="responsive-img" alt="Select level" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Select a level by hovering over it and pulling the trigger button.</p>
-						</div>
-					</div>
-					<br>
-					<br>
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m12 l12">
-							<img src="../images/space_SwitchLevel.gif" class="responsive-img" alt="Throwing selection" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>The user can also grab their selection and move it to where they want it. Selecting a different level will expand it and shrink whatever was previously selected.</p>
-						</div>
-					</div>
-
-					<p><strong>Next Steps:</strong></p>
-					<p>While I was very pleased with the end result of the prototype, I am not done yet! My next step will be to create a GUI that pops up above the selected solar system, similar to my initial sketches. This is necessary in order to show the user the information they need to complete the level. I will also need a back button to go back to the universe view, since my current method was hard-coded to a Vive controller button. I am currently working on the project, but will be sure to update my site once I have made any progress!</p>
-
-					<p><strong>Other Applications?</strong></p>
-					<p>I am excited to develop this project further and see where it goes. While I developed it with a level select in mind, it could have many other applications as well! I would be most excited to adapt this design to a VR desktop layout. Windows or programs could be floating around the user waiting to be selected. The user could also expand multiple windows at once in order to improve task flow within their virtual environment.</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- Other Pages -->
-		<div class="grey lighten-2">
-			<div class="container links" id="links">
-			    <div class="row">
-
-			    	<!--Virtual Phone-->
-			    	<!-- <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="vp">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Virtual Phone</h3>
-			    			</div>
-			    		</div>
-				    </div> -->
-				    
-					<!--Spartaga-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Spartaga</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-			    	<!--Space-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="space">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Wizard-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="wizard">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Spell Prototypes</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Kayak-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="kayak">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Kayak Simulator</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Bellhapp-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Bellhapp</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Fragments-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="fragments">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Fragments</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Hackathon-->
-			        <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--LunarLander-->
-				    <!-- <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Lunar Lander</h3>
-			    			</div>
-			    		</div>
-				    </div> -->
-
-				    <!--IMADatavis-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">IMA Datavis</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Quadcopter-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
-			    			<a href="projects/quadcopter.html"><div></div></a>
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Quadcopter Controls</h3>
-			    			</div>
-			    		</div>
-				    </div>
-				</div>
-		    </div>
-		</div>
-
-		<footer class="deep-purple darken-1">
-	      	<div class="footer-copyright">
-	        	<div class="container">
-	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
-	        	</div>
-	      	</div>
-	    </footer>
-	</body>
+<html lang="en">
+
+	<head>
+
+		<title>Space Game</title>
+
+
+
+		<link rel='shortcut icon' type='image/x-icon' href='../images/maxface.png'/>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<script type="text/javascript" src="../js/velocity.min.js"></script>
+
+		<script type="text/javascript" src="../js/projectLogic.js"></script>
+
+
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+		<!-- CSS and JS -->
+
+		<link rel="stylesheet" href="../css/animate.min.css">
+
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+
+	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
+
+	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
+
+
+
+	 	<!-- jQuery is required by Materialize to function -->
+
+
+
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	    <script type="text/javascript" src="../js/materialize.min.js"></script>
+
+
+
+	</head>
+
+
+
+	<body>
+
+		<script>
+
+		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+
+		  	ga('create', 'UA-83745844-1', 'auto');
+
+		  	ga('send', 'pageview');
+
+		</script>
+
+		
+
+	    <!-- Header -->
+
+	    <a href="../index.html">
+
+	    	<img id="projectLogo" src="../images/maxface.png" alt="flat max">
+
+		</a>
+
+	    <div class="project-intro deep-purple darken-1 z-depth-1">
+
+	        <h1 class="grey-text text-lighten-5">"Space Game" Level Select</h1>
+
+	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">UX/UI Designer, Developer</h5>
+
+	    </div>
+
+
+
+		<div class="container">
+
+			<div class="row">
+
+
+
+				<!-- project content -->
+
+				<div class="col s12 m12 l12">
+
+					<p><strong>Motivation:</strong></p>
+
+					<p>Having designed for web/phone UIs and recently starting my journey as a VR developer/designer, I wanted to pair my past experience with my new experience. My goal was to design and prototype a novel level select/navigation UI in VR. The motivation behind the design was to create something that couldn't be done with a 2d interface and in such a way that it “wowed” the user. Many VR games right now seem to just take their 2d UIs and throw them onto floating walls. I'll admit that I initially thought that would be a solid solution to this problem, but I am much happier with what I came up with after a bit more thought.</p>
+
+
+
+					<p><strong>Design:</strong></p>
+
+					<p>My initial sketches portrayed a 2d map projected onto either a flat wall. The player would select levels by using the Vive’s trigger to “click”. This would then have popped the level off of the map and expanded it to show additional information. The player would then click start and begin the level. While this would be an effective and intuitive approach, I thought that there had to be a better use of the new VR technology. I knew that the way the game was set up required some sort of VR equivalent to the 2d map, but I refused to just create a 2d interface in a VR environment. I started to sketch a version of the map that wrapped around the player. While this took advantage of the Vive’s 360 player immersion, it still was too similar to the standard map interface.</p>
+
+
+
+					<script>
+
+						$(document).ready(function () {
+
+			    			// Plugin initialization
+
+			    			$('.slider').slider({height: 500});
+
+						});
+
+					</script>
+
+
+
+					<p style="text-align: center;"><strong>Sketches</strong></p>
+
+					<!-- Sketches -->
+
+					<div class="row">
+
+				    	<div class="col s12 m6 l6">
+
+				    		<img src="../images/space_180map.jpg" class="responsive-img" style="height:50%">
+
+					    </div>
+
+					    <div class="col s12 m6 l6">
+
+					    	<img src="../images/space_360map.jpg" class="responsive-img" style="height:50%"> 
+
+					    </div>
+
+					    <div class="col s12 m6 l6">
+
+					    	<img src="../images/space_sketch1.jpg" class="responsive-img" style="height:50%"> 
+
+					    </div>
+
+					    <div class="col s12 m6 l6">
+
+					    	<img src="../images/space_sketch2.jpg" class="responsive-img" style="height:50%"> 
+
+					    </div>
+
+					</div>
+
+
+
+					<p>My solution hit me when I realized that I was trying to map a universe on a 2d plane. That didn’t make any sense! The universe’s element of depth allowed me to actually stick the player inside of the map instead of having them look at it as they would a standard map. This is something that VR was made for, and so I got to work on the development of this idea.</p>
+
+
+
+					<p><strong>Development:</strong></p>
+
+					<p>I developed the prototype in Unity using C#. My goal was to have solar systems floating around the player that they could zoom in on upon selection. My first step was the equivalent of wireframing an app or website. I used grey artless boxes as solar systems until I made the interactions feel good and fun to do without even looking that amazing. I had to implement the button architecture since the Unity store did not have prebuilt assets that matched what I was doing. Once the buttons were working, I added the zooming/selection animation. There was a bit of vector math involved here. I basically drew a vector from the selected button to each of the other buttons, and then moved the other buttons along that vector a certain distance while centering and enlarging the selected button.</p>
+
+
+
+					<p>Once I was done with the animations and the interactions felt fun to play with, I decided that I wanted to make it look good. I grabbed a few low poly planets from the Unity asset store, created some simple sun and star sphere particle effects, and transformed each of the grey boxes into little solar systems.</p>
+
+
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/space_SelectLevel.gif" class="responsive-img" alt="Select level" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Select a level by hovering over it and pulling the trigger button.</p>
+
+						</div>
+
+					</div>
+
+					<br>
+
+					<br>
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/space_SwitchLevel.gif" class="responsive-img" alt="Throwing selection" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>The user can also grab their selection and move it to where they want it. Selecting a different level will expand it and shrink whatever was previously selected.</p>
+
+						</div>
+
+					</div>
+
+
+
+					<p><strong>Next Steps:</strong></p>
+
+					<p>While I was very pleased with the end result of the prototype, I am not done yet! My next step will be to create a GUI that pops up above the selected solar system, similar to my initial sketches. This is necessary in order to show the user the information they need to complete the level. I will also need a back button to go back to the universe view, since my current method was hard-coded to a Vive controller button. I am currently working on the project, but will be sure to update my site once I have made any progress!</p>
+
+
+
+					<p><strong>Other Applications?</strong></p>
+
+					<p>I am excited to develop this project further and see where it goes. While I developed it with a level select in mind, it could have many other applications as well! I would be most excited to adapt this design to a VR desktop layout. Windows or programs could be floating around the user waiting to be selected. The user could also expand multiple windows at once in order to improve task flow within their virtual environment.</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<!-- Other Pages -->
+
+		<div class="grey lighten-2">
+
+			<div class="container links" id="links">
+
+			    <div class="row">
+
+
+
+			    	<!--Virtual Phone-->
+
+			    	<!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="vp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Virtual Phone</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+				    
+
+					<!--Spartaga-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spartaga</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+			    	<!--Space-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="space">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Wizard-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="wizard">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spell Prototypes</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Kayak-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="kayak">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Kayak Simulator</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Bellhapp-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Bellhapp</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Fragments-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="fragments">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Fragments</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Hackathon-->
+
+			        <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--LunarLander-->
+
+				    <!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Lunar Lander</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+
+
+				    <!--IMADatavis-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">IMA Datavis</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Quadcopter-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
+
+			    			<a href="projects/quadcopter.html"><div></div></a>
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Quadcopter Controls</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				</div>
+
+		    </div>
+
+		</div>
+
+
+
+		<footer class="deep-purple darken-1">
+
+	      	<div class="footer-copyright">
+
+	        	<div class="container">
+
+	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
+
+	        	</div>
+
+	      	</div>
+
+	    </footer>
+
+	</body>
+
 </html>

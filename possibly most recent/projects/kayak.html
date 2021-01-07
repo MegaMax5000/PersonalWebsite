@@ -1,207 +1,413 @@
-<html lang="en">
-	<head>
-		<title>Kayak Simulator</title>
-
-		<link rel='shortcut icon' type='image/x-icon' href='../images/FlatProfile_Max_NoBack_BW.png'/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script type="text/javascript" src="../js/velocity.min.js"></script>
-		<script type="text/javascript" src="../js/projectLogic.js"></script>
-
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<!-- CSS and JS -->
-		<link rel="stylesheet" href="../css/animate.min.css">
-		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
-	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
-
-	 	<!-- jQuery is required by Materialize to function -->
-
-	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	    <script type="text/javascript" src="../js/materialize.min.js"></script>
-
-	</head>
-
-	<body>
-		<script>
-		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  	ga('create', 'UA-83745844-1', 'auto');
-		  	ga('send', 'pageview');
-		</script>
-		
-	    <!-- Header -->
-	    <a href="../index.html">
-	    	<img id="projectLogo" src="../images/FlatProfile_Max_NoBack_BW.png" alt="flat max">
-		</a>
-	    <div class="project-intro deep-purple darken-1 z-depth-1">
-	        <h1 class="grey-text text-lighten-5">Kayak Simulator</h1>
-	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">Developer, UX/UI Designer, 3d Modeling</h5>
-	    </div>
-
-		<div class="container">
-			<div class="row">
-
-				<!-- project content -->
-				<div class="col s12 m12 l12">
-					<p><strong>Motivation:</strong></p>
-					<p>The motivation behind this project was simple. I was looking to get more experience developing for the Vive and I wanted a way to explore innovative and unusual user interfaces and game design. After a weekend kayak trip I decided that creating a kayak simulator would be the perfect way of accomplishing these goals.</p>
-
-					<p>I should gain access to a vive in early september so that I can add more GIFS of the step by step process. Until then, here are the GIFs of the finished product so far.</p>
-					
-  					<div class="row" style="text-align: center;">
-						<div class="col s12 m12 l12">
-							<img src="../images/kayakBasics2.gif" class="responsive-img" alt="paddling the kayak" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Paddling forward in the kayak.</p>
-						</div>
-					</div>
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m12 l12">
-							<img src="../images/kayakBasics.gif" class="responsive-img" alt="Changing directions" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Back Paddling and changing directions.</p>
-						</div>
-					</div>
-
-					<p><strong>Design and Development Process:</strong></p>
-					<p>My design goal coming into this project was to create controls that were as intuitive as possible while feeling good to use. I thought that the best way to do this was to mimic how someone would paddle a kayak in reality as closely as possible. This meant that the simulator had to allow the user to “feel” like they were holding a paddle and to allow them to do anything that they would be able to do with a real paddle. From a development standpoint, I broke the project into three parts: holding the paddle, using the paddle to move through water and confining the player to the boat.</p>
-
-					<p>My initial idea with holding the paddle was for the paddle to be split up into several different pieces that the user to grab hold of and snap their hands to. The main problem with this was that once the player grabs with both hands, there is nothing stopping them from moving their hands further or closer apart. Because of this, I decided to position the paddle so that it was always at the midpoint of the two hands and orient it in such a way that it makes sense. This wasn’t too bad and did not take much testing to see that it felt good.</p>
-
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m12 l12">
-							<img src="../images/kayakPaddle.gif" class="responsive-img" alt="Kayak Paddle" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Position and angle of the paddle.</p>
-						</div>
-					</div>
-
-					<p>Once the paddle felt good in the player’s hands, I had to make it usable. This first meant propelling the kayak through the water. I assigned the kayak and water on their own layers in order to control the collisions that the paddle actually pays attention to. Whenever a side of the paddle entered the water, I calculated the velocity using an array of the position in the last 5 frames. I then applied this velocity to the kayak as a force added at the point of contact with the water. This instantly allowed the player to paddle in any direction and have the boat work just like in reality. I then added some variables such as force intensity, water drag, mass of kayak, and a coefficient for the amount of force added to the angular velocity of the kayak. Then I spent about an hour just playing with the variables until paddling the kayak felt great.</p>
-
-					<p>Now that the kayak and paddle were usable, I had to address some problems that came up during development. The first was that, since I was using the Vive, the player was allowed to walk anywhere in the room. This made them look like they were outside of the kayak and also made it so that their head position was not in the optimal position. I had to dig around in the Vive code for a while, but eventually found a way to fix the position of the player’s head to a certain point while still allowing for 360 degree rotation of the head. After doing this I decided to add haptic feedback to the controllers when a paddle was in the water (left control got haptic response when the left paddle was in the water) correlating with the current velocity of the paddle. This was meant to both simulate the feeling of actually pushing/pulling water with the paddle and also to signal the player when a paddle was in the water.</p>
-
-					<p><strong>Future Plans:</strong></p>
-					<p>Now that I have created a working prototype of the simulator there are a number of additions to be added at a later time. The first major addition is to fine tune the paddle usability. The angle of the paddle in the water and the surface area of the paddle currently under water is not taken into account when applying force to the kayak.These are the first two changes I would make to the prototype. I also have a few aesthetic changes to make, such as adding ripples to disturbed water and creating a new hand animation that holds the paddle. Once those changes are made, I will try and see where the prototype could go. My initial thought is to create a white-water kayaking game where the player must navigate the waters without crashing into rocks, land, fallen trees, Magikarp, etc. Everything done so far was done in about 10 hours of hacking, and I think that these additions would take about 10 more, 20 if I wanted to make sure that the UX was up to my standards. I am currently looking for a Vive to work with, but I will update this page when I make more progress!</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- Other Pages -->
-		<div class="grey lighten-2">
-			<div class="container links" id="links">
-			    <div class="row">
-
-			    	<!--Virtual Phone-->
-			    	<!-- <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="vp">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Virtual Phone</h3>
-			    			</div>
-			    		</div>
-				    </div> -->
-				    
-				    <!--Spartaga-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Spartaga</h3>
-			    			</div>
-			    		</div>
-				    </div>
-				    
-			    	<!--Space-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="space">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Wizard-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="wizard">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Spell prototypes</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Kayak-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="kayak">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Kayak Simulator</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Bellhapp-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Bellhapp</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Fragments-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="fragments">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Fragments</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Hackathon-->
-			        <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--LunarLander-->
-				    <!-- <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Lunar Lander</h3>
-			    			</div>
-			    		</div>
-				    </div> -->
-
-				    <!--IMADatavis-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">IMA Datavis</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Quadcopter-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
-			    			<a href="projects/quadcopter.html"><div></div></a>
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Quadcopter Controls</h3>
-			    			</div>
-			    		</div>
-				    </div>
-				</div>
-		    </div>
-		</div>
-
-		<footer class="deep-purple darken-1">
-	      	<div class="footer-copyright">
-	        	<div class="container">
-	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
-	        	</div>
-	      	</div>
-	    </footer>
-	</body>
+<html lang="en">
+
+	<head>
+
+		<title>Kayak Simulator</title>
+
+
+
+		<link rel='shortcut icon' type='image/x-icon' href='../images/maxface.png'/>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<script type="text/javascript" src="../js/velocity.min.js"></script>
+
+		<script type="text/javascript" src="../js/projectLogic.js"></script>
+
+
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+		<!-- CSS and JS -->
+
+		<link rel="stylesheet" href="../css/animate.min.css">
+
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+
+	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
+
+	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
+
+
+
+	 	<!-- jQuery is required by Materialize to function -->
+
+
+
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	    <script type="text/javascript" src="../js/materialize.min.js"></script>
+
+
+
+	</head>
+
+
+
+	<body>
+
+		<script>
+
+		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+
+		  	ga('create', 'UA-83745844-1', 'auto');
+
+		  	ga('send', 'pageview');
+
+		</script>
+
+		
+
+	    <!-- Header -->
+
+	    <a href="../index.html">
+
+	    	<img id="projectLogo" src="../images/maxface.png" alt="flat max">
+
+		</a>
+
+	    <div class="project-intro deep-purple darken-1 z-depth-1">
+
+	        <h1 class="grey-text text-lighten-5">Kayak Simulator</h1>
+
+	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">Developer, UX/UI Designer, 3d Modeling</h5>
+
+	    </div>
+
+
+
+		<div class="container">
+
+			<div class="row">
+
+
+
+				<!-- project content -->
+
+				<div class="col s12 m12 l12">
+
+					<p><strong>Motivation:</strong></p>
+
+					<p>The motivation behind this project was simple. I was looking to get more experience developing for the Vive and I wanted a way to explore innovative and unusual user interfaces and game design. After a weekend kayak trip I decided that creating a kayak simulator would be the perfect way of accomplishing these goals.</p>
+
+
+
+					<p>I should gain access to a vive in early september so that I can add more GIFS of the step by step process. Until then, here are the GIFs of the finished product so far.</p>
+
+					
+
+  					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/kayakBasics2.gif" class="responsive-img" alt="paddling the kayak" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Paddling forward in the kayak.</p>
+
+						</div>
+
+					</div>
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/kayakBasics.gif" class="responsive-img" alt="Changing directions" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Back Paddling and changing directions.</p>
+
+						</div>
+
+					</div>
+
+
+
+					<p><strong>Design and Development Process:</strong></p>
+
+					<p>My design goal coming into this project was to create controls that were as intuitive as possible while feeling good to use. I thought that the best way to do this was to mimic how someone would paddle a kayak in reality as closely as possible. This meant that the simulator had to allow the user to “feel” like they were holding a paddle and to allow them to do anything that they would be able to do with a real paddle. From a development standpoint, I broke the project into three parts: holding the paddle, using the paddle to move through water and confining the player to the boat.</p>
+
+
+
+					<p>My initial idea with holding the paddle was for the paddle to be split up into several different pieces that the user to grab hold of and snap their hands to. The main problem with this was that once the player grabs with both hands, there is nothing stopping them from moving their hands further or closer apart. Because of this, I decided to position the paddle so that it was always at the midpoint of the two hands and orient it in such a way that it makes sense. This wasn’t too bad and did not take much testing to see that it felt good.</p>
+
+
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/kayakPaddle.gif" class="responsive-img" alt="Kayak Paddle" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Position and angle of the paddle.</p>
+
+						</div>
+
+					</div>
+
+
+
+					<p>Once the paddle felt good in the player’s hands, I had to make it usable. This first meant propelling the kayak through the water. I assigned the kayak and water on their own layers in order to control the collisions that the paddle actually pays attention to. Whenever a side of the paddle entered the water, I calculated the velocity using an array of the position in the last 5 frames. I then applied this velocity to the kayak as a force added at the point of contact with the water. This instantly allowed the player to paddle in any direction and have the boat work just like in reality. I then added some variables such as force intensity, water drag, mass of kayak, and a coefficient for the amount of force added to the angular velocity of the kayak. Then I spent about an hour just playing with the variables until paddling the kayak felt great.</p>
+
+
+
+					<p>Now that the kayak and paddle were usable, I had to address some problems that came up during development. The first was that, since I was using the Vive, the player was allowed to walk anywhere in the room. This made them look like they were outside of the kayak and also made it so that their head position was not in the optimal position. I had to dig around in the Vive code for a while, but eventually found a way to fix the position of the player’s head to a certain point while still allowing for 360 degree rotation of the head. After doing this I decided to add haptic feedback to the controllers when a paddle was in the water (left control got haptic response when the left paddle was in the water) correlating with the current velocity of the paddle. This was meant to both simulate the feeling of actually pushing/pulling water with the paddle and also to signal the player when a paddle was in the water.</p>
+
+
+
+					<p><strong>Future Plans:</strong></p>
+
+					<p>Now that I have created a working prototype of the simulator there are a number of additions to be added at a later time. The first major addition is to fine tune the paddle usability. The angle of the paddle in the water and the surface area of the paddle currently under water is not taken into account when applying force to the kayak.These are the first two changes I would make to the prototype. I also have a few aesthetic changes to make, such as adding ripples to disturbed water and creating a new hand animation that holds the paddle. Once those changes are made, I will try and see where the prototype could go. My initial thought is to create a white-water kayaking game where the player must navigate the waters without crashing into rocks, land, fallen trees, Magikarp, etc. Everything done so far was done in about 10 hours of hacking, and I think that these additions would take about 10 more, 20 if I wanted to make sure that the UX was up to my standards. I am currently looking for a Vive to work with, but I will update this page when I make more progress!</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<!-- Other Pages -->
+
+		<div class="grey lighten-2">
+
+			<div class="container links" id="links">
+
+			    <div class="row">
+
+
+
+			    	<!--Virtual Phone-->
+
+			    	<!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="vp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Virtual Phone</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+				    
+
+				    <!--Spartaga-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spartaga</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				    
+
+			    	<!--Space-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="space">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Wizard-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="wizard">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spell prototypes</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Kayak-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="kayak">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Kayak Simulator</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Bellhapp-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Bellhapp</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Fragments-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="fragments">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Fragments</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Hackathon-->
+
+			        <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--LunarLander-->
+
+				    <!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Lunar Lander</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+
+
+				    <!--IMADatavis-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">IMA Datavis</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Quadcopter-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
+
+			    			<a href="projects/quadcopter.html"><div></div></a>
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Quadcopter Controls</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				</div>
+
+		    </div>
+
+		</div>
+
+
+
+		<footer class="deep-purple darken-1">
+
+	      	<div class="footer-copyright">
+
+	        	<div class="container">
+
+	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
+
+	        	</div>
+
+	      	</div>
+
+	    </footer>
+
+	</body>
+
 </html>

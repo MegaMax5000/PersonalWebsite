@@ -1,283 +1,565 @@
-<html lang="en">
-	<head>
-		<title>Wizard Game</title>
-
-		<link rel='shortcut icon' type='image/x-icon' href='../images/FlatProfile_Max_NoBack_BW.png'/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script type="text/javascript" src="../js/velocity.min.js"></script>
-		<script type="text/javascript" src="../js/projectLogic.js"></script>
-
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<!-- CSS and JS -->
-		<link rel="stylesheet" href="../css/animate.min.css">
-		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
-	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
-
-	 	<!-- jQuery is required by Materialize to function -->
-
-	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	    <script type="text/javascript" src="../js/materialize.min.js"></script>
-
-	</head>
-
-	<body>
-		<script>
-		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  	ga('create', 'UA-83745844-1', 'auto');
-		  	ga('send', 'pageview');
-		</script>
-		
-	    <!-- Header -->
-	    <a href="../index.html">
-	    	<img id="projectLogo" src="../images/FlatProfile_Max_NoBack_BW.png" alt="flat max">
-		</a>
-	    <div class="project-intro deep-purple darken-1 z-depth-1">
-	        <h1 class="grey-text text-lighten-5">Spell Casting Prototypes</h1>
-	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">Technical Designer (UX/UI Design and Development)</h5>
-	    </div>
-
-		<div class="container">
-			<div class="row">
-
-				<!-- project content -->
-				<div class="col s12 m12 l12">
-					<p><strong>Motivation:</strong></p>
-					<p>The project we were working on at House of How (code name wizard game, since shelved until we get a larger workforce) was a VR game where the player utilizes 4 classes of magic in order to solve puzzles. As a Technical Designer, I was tasked with brainstorming, designing, and prototyping spells. At first I was challenged to create any spells that would "feel good" (like the fireballs). After that I focused on just gravity manipulation. Most of my work the first month or so was game and mechanic design mixed with learning how to develop for the Vive. Once I had some solid designs and a strong understanding of the Vive, the last couple months of my work lay mostly in C# development and tweaking the feel of spells from a UX standpoint.</p>
-
-					<p><strong>One Handed Fireball</strong></p>
-					<p>As soon as this game was pitched to me, my mind went to fireballs. Drawing inspiration from Fire-benders in Avatar, flame magic in Skyrim, and wizards in magic universes everywhere, I got to work designing what I thought would make fireballs feel the absolute coolest in VR. The first requirement that came to mind was how easy and intuitive casting the spell should be. Whenever I see a fire mage cast a standard fireball, they don't even break a sweat. I decided that the interaction should be one button press.</p>
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m8 offset-m2 l8 offset-l2">
-							<img src="../images/wizard_1hfbSketch.png" class="responsive-img" alt="1HFB sketch" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Early sketch of one handed fireball casting interaction.</p>
-						</div>
-					</div>
-					<p>In the sketch above I thought that it would be the most easy and intuitive to the user if the fireball just cast forward in the direction they were pointing. However, once I actually prototyped this out I felt a lack of control and unsure of what direction the spell would fly in when I pulled the trigger. To remedy this, I made the spell a projectile that is thrown by the user. I tripled the velocity that the spell leaves the hand with and immediately had much more fun throwing fireballs around the test scene. The last ingredient to a perfect fireball was destruction. It was just a basic fireball, but it had to pack a good punch to it in order to make it fun. As you can see below, I think I got it just right ;)</p>
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m12 l12">
-							<img src="../images/wizard_OHFB.gif" class="responsive-img" alt="One Handed Fireball" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Finished prototype of casting a simple fireball.</p>
-						</div>
-					</div>
-
-					<br>
-
-					<p><strong>Two Handed Fireball</strong></p>
-					<p>Once I had started sketching out a low power fireball, I thought it would be fun to introduce a higher powered fireball that took both hands to cast. I spent a while thinking about different ways of incorporating a second hand and making the player feel as though they had a greater sense of power. I eventually decided on the technique detailed below where the size of the fireball is dependent on the distance between the player’s hands. The size of the fireball also determines the speed and destruction of the resulting spell. The player casts the fireball by pushing their controllers in the direction they want it to go.</p>
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m8 offset-m2 l8 offset-l2">
-							<img src="../images/wizard_2hfbSketch.png" class="responsive-img" alt="2HFB sketch" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Early sketch of two handed fireball casting interaction.</p>
-						</div>
-					</div>
-					<p>This spell took a bit more development to prototype than the one handed predecessor. This is mostly because of the push gesture required to send the fireball flying. Creating this gesture took a fairly equal amount of time spent coding and perfecting UX, but the end product felt great! Below you can see me casting the spell by pushing it forward. Another way I enjoy casting is by holding both controllers above my head and throwing from there.</p>
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m12 l12">
-							<img src="../images/wizard_THFB.gif" class="responsive-img" alt="Two Handed Fireball" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Finished prototype of casting a more powerful two handed fireball.</p>
-						</div>
-					</div>
-
-					<br>
-
-					<p><strong>Gravity Lash (basic)</strong></p>
-					<p>The idea behind the gravity lash was that you essentially shift the direction of gravity for one object and point it at another. After telekinesis (unfortunately I didn’t get a video for this one!) this was the first gravity manipulation spell that I designed and created. As far as UI goes, this one was pretty simple. Select the object you want to manipulate, select where/what you want gravity to point at for that object, done!</p>
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m8 offset-m2 l8 offset-l2">
-							<img src="../images/wizard_gravitylashSketch.png" class="responsive-img" alt="gravity lash sketch" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Sketch of gravity lash user interaction. Simple as possible.</p>
-						</div>
-					</div>
-					<p>Most of the time spent on this spell was either programming or UX designing. Once I got the spell working code-wise, I decided to start creating some visual feedback for the user. I found through a few tests that users were confused when casting the spell since they weren’t exactly sure what objects they had selected to be manipulated. To remedy this I made it so the object you are pointing at was highlighted (this is shown better in the next spell than the gif below). Also, if you pointed at an object that could either not be lashed or that an object could not be lashed to the spell fizzled out with a particle and sound effect. The end result was pretty satisfying, but nowhere near as satisfying as the god-mode gravity lash that I’ll talk about next.</p>
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m12 l12">
-							<img src="../images/wizard_gravitylash.gif" class="responsive-img" alt="Gravity lash (basic)" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Prototype of the basic gravity lash.</p>
-						</div>
-					</div>
-
-					<br>
-
-					<p><strong>God-Mode Gravity Lash (Area of Effect)</strong></p>
-					<p>The god-mode lash had the same effect as the normal lash, except a bit stronger and you could apply it to multiple objects. At this point in the project it became apparent that we would want to select multiple objects at the same time, so I used the god-mode lash in order to prototype this interaction.</p>
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m8 offset-m2 l8 offset-l2">
-							<img src="../images/wizard_godlashSketch.png" class="responsive-img" alt="god lash sketch" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Simpe sketch of the circle selector and powerful gravity lash.</p>
-						</div>
-					</div>
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m6 l6">
-							<img src="../images/wizard_godlashselect.jpg" class="responsive-img" alt="god lash select" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Higher-def sketch of selection.</p>
-						</div>
-						<div class="col s12 m6 l6">
-							<img src="../images/wizard_gravityvision.jpg" class="responsive-img" alt="gravity vision" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>We decided we wanted to introduce puzzle by giving the player an immense amount of power in a dream or vision setting. This is the gravity vision plan that I had in mind.</p>
-						</div>
-					</div>
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m12 l12">
-							<img src="../images/wizard_godlash.gif" class="responsive-img" alt="Gravity lash (god)" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Finished prototype of the circle selector paired with a more powerful gravity lash.</p>
-						</div>
-					</div>
-
-					<br>
-
-					<p><strong>Ball and Chain</strong></p>
-					<p>This prototype was more just an expiriment with rope physics. The only interaction here is swinging the ball and chain like you would in real life! One of the more difficult parts was the haptic feedback. Without any haptic feedback the player felt a bit silly swinging the weapon around. I wanted to add haptic feedback (vibrations in the Vive controller) with strength proportional to the amount of tension on the chain. Turns out finding the tension along the chain is not easy! So this took a bit longer than I would have liked. This experiment with rope physics eventually led to me making doors being opened via pulling on a hanging chain (this felt REALLY god in VR) and objects being dragged around the room via chain.</p>
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m12 l12">
-							<img src="../images/wizard_fireballandchain.gif" class="responsive-img" alt="Ball and Chain" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Prototype of the ball and chain.</p>
-						</div>
-					</div>
-
-					<br>
-
-					<p><strong>Other spells I didn't get a chance to prototype</strong></p>
-					<p>Here are some other sketches of spells and interactions I either didn't get around to making or that someone else on the team made!</p>
-
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m6 l6">
-							<img src="../images/wizard_whiteboard2.png" class="responsive-img" alt="gravity vision" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-						<div class="col s12 m6 l6">
-							<img src="../images/wizard_whiteboard1.png" class="responsive-img" alt="gravity vision" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-						<div class="col s12 m6 l6">
-							<img src="../images/wizard_changingSpellsSketch.png" class="responsive-img" alt="god lash select" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-						<div class="col s12 m6 l6">
-							<img src="../images/wizard_teleSketch.png" class="responsive-img" alt="gravity vision" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Other Pages -->
-		<div class="grey lighten-2">
-			<div class="container links" id="links">
-			    <div class="row">
-
-			    	<!--Virtual Phone-->
-			    	<!-- <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="vp">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Virtual Phone</h3>
-			    			</div>
-			    		</div>
-				    </div> -->
-
-				    <!--Spartaga-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Spartaga</h3>
-			    			</div>
-			    		</div>
-				    </div>
-				    
-			    	<!--Space-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="space">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Wizard-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="wizard">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Spell prototypes</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Kayak-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="kayak">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Kayak Simulator</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Bellhapp-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Bellhapp</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Fragments-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="fragments">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Fragments</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Hackathon-->
-			        <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--LunarLander-->
-				    <!-- <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Lunar Lander</h3>
-			    			</div>
-			    		</div>
-				    </div> -->
-
-				    <!--IMADatavis-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">IMA Datavis</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Quadcopter-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
-			    			<a href="projects/quadcopter.html"><div></div></a>
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Quadcopter Controls</h3>
-			    			</div>
-			    		</div>
-				    </div>
-				</div>
-		    </div>
-		</div>
-
-		<footer class="deep-purple darken-1">
-	      	<div class="footer-copyright">
-	        	<div class="container">
-	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
-	        	</div>
-	      	</div>
-	    </footer>
-	</body>
+<html lang="en">
+
+	<head>
+
+		<title>Wizard Game</title>
+
+
+
+		<link rel='shortcut icon' type='image/x-icon' href='../images/maxface.png'/>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<script type="text/javascript" src="../js/velocity.min.js"></script>
+
+		<script type="text/javascript" src="../js/projectLogic.js"></script>
+
+
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+		<!-- CSS and JS -->
+
+		<link rel="stylesheet" href="../css/animate.min.css">
+
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+
+	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
+
+	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
+
+
+
+	 	<!-- jQuery is required by Materialize to function -->
+
+
+
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	    <script type="text/javascript" src="../js/materialize.min.js"></script>
+
+
+
+	</head>
+
+
+
+	<body>
+
+		<script>
+
+		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+
+		  	ga('create', 'UA-83745844-1', 'auto');
+
+		  	ga('send', 'pageview');
+
+		</script>
+
+		
+
+	    <!-- Header -->
+
+	    <a href="../index.html">
+
+	    	<img id="projectLogo" src="../images/maxface.png" alt="flat max">
+
+		</a>
+
+	    <div class="project-intro deep-purple darken-1 z-depth-1">
+
+	        <h1 class="grey-text text-lighten-5">Spell Casting Prototypes</h1>
+
+	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">Technical Designer (UX/UI Design and Development)</h5>
+
+	    </div>
+
+
+
+		<div class="container">
+
+			<div class="row">
+
+
+
+				<!-- project content -->
+
+				<div class="col s12 m12 l12">
+
+					<p><strong>Motivation:</strong></p>
+
+					<p>The project we were working on at House of How (code name wizard game, since shelved until we get a larger workforce) was a VR game where the player utilizes 4 classes of magic in order to solve puzzles. As a Technical Designer, I was tasked with brainstorming, designing, and prototyping spells. At first I was challenged to create any spells that would "feel good" (like the fireballs). After that I focused on just gravity manipulation. Most of my work the first month or so was game and mechanic design mixed with learning how to develop for the Vive. Once I had some solid designs and a strong understanding of the Vive, the last couple months of my work lay mostly in C# development and tweaking the feel of spells from a UX standpoint.</p>
+
+
+
+					<p><strong>One Handed Fireball</strong></p>
+
+					<p>As soon as this game was pitched to me, my mind went to fireballs. Drawing inspiration from Fire-benders in Avatar, flame magic in Skyrim, and wizards in magic universes everywhere, I got to work designing what I thought would make fireballs feel the absolute coolest in VR. The first requirement that came to mind was how easy and intuitive casting the spell should be. Whenever I see a fire mage cast a standard fireball, they don't even break a sweat. I decided that the interaction should be one button press.</p>
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m8 offset-m2 l8 offset-l2">
+
+							<img src="../images/wizard_1hfbSketch.png" class="responsive-img" alt="1HFB sketch" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Early sketch of one handed fireball casting interaction.</p>
+
+						</div>
+
+					</div>
+
+					<p>In the sketch above I thought that it would be the most easy and intuitive to the user if the fireball just cast forward in the direction they were pointing. However, once I actually prototyped this out I felt a lack of control and unsure of what direction the spell would fly in when I pulled the trigger. To remedy this, I made the spell a projectile that is thrown by the user. I tripled the velocity that the spell leaves the hand with and immediately had much more fun throwing fireballs around the test scene. The last ingredient to a perfect fireball was destruction. It was just a basic fireball, but it had to pack a good punch to it in order to make it fun. As you can see below, I think I got it just right ;)</p>
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/wizard_OHFB.gif" class="responsive-img" alt="One Handed Fireball" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Finished prototype of casting a simple fireball.</p>
+
+						</div>
+
+					</div>
+
+
+
+					<br>
+
+
+
+					<p><strong>Two Handed Fireball</strong></p>
+
+					<p>Once I had started sketching out a low power fireball, I thought it would be fun to introduce a higher powered fireball that took both hands to cast. I spent a while thinking about different ways of incorporating a second hand and making the player feel as though they had a greater sense of power. I eventually decided on the technique detailed below where the size of the fireball is dependent on the distance between the player’s hands. The size of the fireball also determines the speed and destruction of the resulting spell. The player casts the fireball by pushing their controllers in the direction they want it to go.</p>
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m8 offset-m2 l8 offset-l2">
+
+							<img src="../images/wizard_2hfbSketch.png" class="responsive-img" alt="2HFB sketch" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Early sketch of two handed fireball casting interaction.</p>
+
+						</div>
+
+					</div>
+
+					<p>This spell took a bit more development to prototype than the one handed predecessor. This is mostly because of the push gesture required to send the fireball flying. Creating this gesture took a fairly equal amount of time spent coding and perfecting UX, but the end product felt great! Below you can see me casting the spell by pushing it forward. Another way I enjoy casting is by holding both controllers above my head and throwing from there.</p>
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/wizard_THFB.gif" class="responsive-img" alt="Two Handed Fireball" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Finished prototype of casting a more powerful two handed fireball.</p>
+
+						</div>
+
+					</div>
+
+
+
+					<br>
+
+
+
+					<p><strong>Gravity Lash (basic)</strong></p>
+
+					<p>The idea behind the gravity lash was that you essentially shift the direction of gravity for one object and point it at another. After telekinesis (unfortunately I didn’t get a video for this one!) this was the first gravity manipulation spell that I designed and created. As far as UI goes, this one was pretty simple. Select the object you want to manipulate, select where/what you want gravity to point at for that object, done!</p>
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m8 offset-m2 l8 offset-l2">
+
+							<img src="../images/wizard_gravitylashSketch.png" class="responsive-img" alt="gravity lash sketch" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Sketch of gravity lash user interaction. Simple as possible.</p>
+
+						</div>
+
+					</div>
+
+					<p>Most of the time spent on this spell was either programming or UX designing. Once I got the spell working code-wise, I decided to start creating some visual feedback for the user. I found through a few tests that users were confused when casting the spell since they weren’t exactly sure what objects they had selected to be manipulated. To remedy this I made it so the object you are pointing at was highlighted (this is shown better in the next spell than the gif below). Also, if you pointed at an object that could either not be lashed or that an object could not be lashed to the spell fizzled out with a particle and sound effect. The end result was pretty satisfying, but nowhere near as satisfying as the god-mode gravity lash that I’ll talk about next.</p>
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/wizard_gravitylash.gif" class="responsive-img" alt="Gravity lash (basic)" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Prototype of the basic gravity lash.</p>
+
+						</div>
+
+					</div>
+
+
+
+					<br>
+
+
+
+					<p><strong>God-Mode Gravity Lash (Area of Effect)</strong></p>
+
+					<p>The god-mode lash had the same effect as the normal lash, except a bit stronger and you could apply it to multiple objects. At this point in the project it became apparent that we would want to select multiple objects at the same time, so I used the god-mode lash in order to prototype this interaction.</p>
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m8 offset-m2 l8 offset-l2">
+
+							<img src="../images/wizard_godlashSketch.png" class="responsive-img" alt="god lash sketch" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Simpe sketch of the circle selector and powerful gravity lash.</p>
+
+						</div>
+
+					</div>
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m6 l6">
+
+							<img src="../images/wizard_godlashselect.jpg" class="responsive-img" alt="god lash select" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Higher-def sketch of selection.</p>
+
+						</div>
+
+						<div class="col s12 m6 l6">
+
+							<img src="../images/wizard_gravityvision.jpg" class="responsive-img" alt="gravity vision" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>We decided we wanted to introduce puzzle by giving the player an immense amount of power in a dream or vision setting. This is the gravity vision plan that I had in mind.</p>
+
+						</div>
+
+					</div>
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/wizard_godlash.gif" class="responsive-img" alt="Gravity lash (god)" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Finished prototype of the circle selector paired with a more powerful gravity lash.</p>
+
+						</div>
+
+					</div>
+
+
+
+					<br>
+
+
+
+					<p><strong>Ball and Chain</strong></p>
+
+					<p>This prototype was more just an expiriment with rope physics. The only interaction here is swinging the ball and chain like you would in real life! One of the more difficult parts was the haptic feedback. Without any haptic feedback the player felt a bit silly swinging the weapon around. I wanted to add haptic feedback (vibrations in the Vive controller) with strength proportional to the amount of tension on the chain. Turns out finding the tension along the chain is not easy! So this took a bit longer than I would have liked. This experiment with rope physics eventually led to me making doors being opened via pulling on a hanging chain (this felt REALLY god in VR) and objects being dragged around the room via chain.</p>
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/wizard_fireballandchain.gif" class="responsive-img" alt="Ball and Chain" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Prototype of the ball and chain.</p>
+
+						</div>
+
+					</div>
+
+
+
+					<br>
+
+
+
+					<p><strong>Other spells I didn't get a chance to prototype</strong></p>
+
+					<p>Here are some other sketches of spells and interactions I either didn't get around to making or that someone else on the team made!</p>
+
+
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m6 l6">
+
+							<img src="../images/wizard_whiteboard2.png" class="responsive-img" alt="gravity vision" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+						<div class="col s12 m6 l6">
+
+							<img src="../images/wizard_whiteboard1.png" class="responsive-img" alt="gravity vision" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+						<div class="col s12 m6 l6">
+
+							<img src="../images/wizard_changingSpellsSketch.png" class="responsive-img" alt="god lash select" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+						<div class="col s12 m6 l6">
+
+							<img src="../images/wizard_teleSketch.png" class="responsive-img" alt="gravity vision" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<!-- Other Pages -->
+
+		<div class="grey lighten-2">
+
+			<div class="container links" id="links">
+
+			    <div class="row">
+
+
+
+			    	<!--Virtual Phone-->
+
+			    	<!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="vp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Virtual Phone</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+
+
+				    <!--Spartaga-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spartaga</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				    
+
+			    	<!--Space-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="space">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Wizard-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="wizard">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spell prototypes</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Kayak-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="kayak">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Kayak Simulator</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Bellhapp-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Bellhapp</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Fragments-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="fragments">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Fragments</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Hackathon-->
+
+			        <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--LunarLander-->
+
+				    <!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Lunar Lander</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+
+
+				    <!--IMADatavis-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">IMA Datavis</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Quadcopter-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
+
+			    			<a href="projects/quadcopter.html"><div></div></a>
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Quadcopter Controls</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				</div>
+
+		    </div>
+
+		</div>
+
+
+
+		<footer class="deep-purple darken-1">
+
+	      	<div class="footer-copyright">
+
+	        	<div class="container">
+
+	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
+
+	        	</div>
+
+	      	</div>
+
+	    </footer>
+
+	</body>
+
 </html>

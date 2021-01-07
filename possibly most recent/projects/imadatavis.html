@@ -1,247 +1,493 @@
-<html lang="en">
-	<head>
-		<title>IMA Datavis</title>
-
-		<link rel='shortcut icon' type='image/x-icon' href='../images/FlatProfile_Max_NoBack_BW.png'/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script type="text/javascript" src="../js/velocity.min.js"></script>
-		<script type="text/javascript" src="../js/projectLogic.js"></script>
-
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<!-- CSS and JS -->
-		<link rel="stylesheet" href="../css/animate.min.css">
-		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
-	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
-
-	 	<!-- jQuery is required by Materialize to function -->
-
-	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	    <script type="text/javascript" src="../js/materialize.min.js"></script>
-
-	</head>
-
-	<body>
-		<script>
-		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  	ga('create', 'UA-83745844-1', 'auto');
-		  	ga('send', 'pageview');
-		</script>
-		
-	    <!-- Header -->
-	    <a href="../index.html">
-	    	<img id="projectLogo" src="../images/FlatProfile_Max_NoBack_BW.png" alt="flat max">
-		</a>
-	    <div class="project-intro deep-purple darken-1 z-depth-1">
-	        <h1 class="grey-text text-lighten-5">UW IMA Activity Scheduling Tool</h1>
-	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">UX Design, User Research, Tableau Implementation</h5>
-	    </div>
-
-		<div class="container">
-			<div class="row">
-
-				<!-- project content -->
-				<div class="col s12 m12 l12">
-					<p><strong>Motivation:</strong>
-					</p>
-					<p>
-					The University of Washington Intramural Activities Building (IMA) is a daily hub for physical activity. Thousands of students, faculty, and guests attend the facility each quarter to exercise utilizing the gym equipment and the spaces it provides. Over the last few years, the IMA has sought a way to visualize patterns of guest activity in order to plan programming and special events at its facilities. They want to identify optimal times to ensure space availability and maximize the attendance of these events. The IMA staff  also intend to use such a data visualization to tailor outreach and advertising campaigns toward specific user groups. Furthermore, the IMA staff also seek a tool to help its patron guests plan their activities using information on prior attendance trends.
-					</p>
-					<p>
-					The data kept by the IMA thus far has been in both handwritten format and excel sheets. Stephen Few said that the choices you make when displaying quantitative information “depend primarily on your story.” In this case, the table format provided by excel is useless when trying to tell the story describing attendance trends at the IMA. Instead, we intend to design and develop interactive tools grounded in established data visualization principles to visualize guest attendance and activity patterns in accordance with IMA staff requests.
-					</p>
-					<p>
-					The target users for this visualization include both IMA staff and IMA patron guests. The IMA staff have worked closely with my team for the purposes of designing a visualization to satisfy their needs. As a result of a three month design process, my team of four students has developed two visualization tools and a high-fidelity prototype of a third tool to meet the stakeholder goals. 
-					</p>
-					<p><strong>Process Summary:</strong></p>
-					<p>The design process that my team decided on can be broken into two phases. The first phase results in prototypes and the second produce our final project for the class, but we are not done iterating on the design.
-					</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/imadatavis_summary.png" class="responsive-img" alt="Process Summary" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p><strong>Design Process:</strong></p>
-					<p><strong>1st Iteration</strong></p>
-					<p>We started out our project by gathering requirements, exploring possible designs, and exploring the data. In order to gather requirements we decided to focus on two groups of stakeholders: IMA administration and IMA patrons. We conducted initial interviews with IMA staff and patrons. Two of these interviews were conducted with IMA administration in order to gather requirements and hear from users of our intended visualization tool. These interviews were conducted informally, asking questions pertaining to what the staff request the tool to do and the task they would like it to perform. Three more of these interviews were conducted with IMA patrons that used different facilities at the IMA and came from different backgrounds (students, professors, swimmers, weight-lifters, etc.) Through these interviews we were able to better understand who we were designing for and move into the next step of the design process which was sketching and exploring possible designs. 
-					</p>
-					<p>
-					Our first sketching sessions was meant to quickly throw out as many ideas as we could in order to narrow down where we wanted to go with the visualization tool. Some of our sketches can be found below. After about 10 minutes of sketching out ideas by ourselves, we got together to discus the positive and negative implications of each design. For example while we loved the idea of a heat-map of how busy each individual section of the IMA was at a certain time, there was no way to actually get that data since the staff did not keep track of every section within the IMA. Some of our sketches can be found below.
-					</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/imadatavis_sketch1.jpg" class="responsive-img" alt="Sketch1" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/imadatavis_sketch2.jpg" class="responsive-img" alt="Sketch2" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/imadatavis_sketch3.jpg" class="responsive-img" alt="Sketch3" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p>Although we had an idea of the data we were able to use from our interviews with the IMA staff, we could not actually get our hands on the data until after we generated some design ideas. After our sketches, we formatted the data to a more Tableau-friendly format and started exploring the data and what design ideas were actually possible within Tableau. After exploring the data we made a couple big changes to our project. We were previously interested in including a way to observe changes in attendance based on the weather. However, once we got both datasets into Tableau, we saw that there was really no interesting correlation. The main change that we made was deciding on creating two tools, one for administrative use and one for patron use. After talking to both administrative and patron stakeholders and seeing the actual data that we had, we saw that the administration and patrons had different goals. The administration wanted a higher-level look at the attendance and demographic paterns on a quaterly-yearly scale, while the patrons expressed more interest on planning their workout times on a daily level. After exploring the data, we saw that we could definitely use this data to meet each stakeholders needs separately. We brought our first iteration to an end by prototyping two fully interactive and testable tools in Tableau.
-					</p>
-					<p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/imadatavis_admin1.jpg" class="responsive-img" alt="Admin Prototype" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/imadatavis_patron1.jpg" class="responsive-img" alt="Patron Prototype" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p><strong>2nd Iteration</strong></p>
-					<p>We knew that the goal of our second iteration was a final tool, so we had our work cut out for us. Before anything else, we conducted multiple usability tests on both prototypes. We came up with a few tasks for each of the two stakeholders and asked them to try and complete the tasks. After that we let the participants play around with the tool and give us any feedback that they had. We got tons of great feedback on the first prototypes but the general consensus was that they loved the idea and the information presented in the tools, but the usability could use some real work. There was also a bit of unnecessary information displayed in the administrative prototype that we got rid of.
-					</p>
-					<p>
-					The redesign of our initial prototypes was driven by the results of the user tests conducted. The administrative tool changed in three major ways. The most apparent change was that we split the dashboard up into three separate views, rather than four. While our users were able to interact with the visualization, they found it to be cluttered, especially with the bottom graph. To help solve this even further, we split the administrative tool into a general IMA attendance visualization, a pool visualization, and a comparison between the IMA and the pool. This allowed for us to eliminate clutter and improve the user’s experience with perception and interaction. The second change we made was to eliminate redundant information. The bar graph at the bottom of the tool compared total the median number of attendees between different days of the week. This is something we removed from the final tool since the user found the huge blocks of color to be distracting and not helpful overall. The huge blocks of color also goes against Tufte’s data to ink ratio since there was a large amount of ink representing information that the user could get from other parts of the tool. Another change we made was to the overview presented in the “Attendees per hour” graph which we will discuss further in the “Evaluation” section. The last change we made was to the filters. We had a bit of trouble with Tableau showing filters that we did not want to be available to the user, mostly because they were not at all useful to them. In our final tool we finally found a way to only include the filters that the users actually needed. We also included a filter displaying particular quarters, so the user doesn’t have to use a slider to choose time ranges of interest.
-					</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/imadatavis_admin2.png" class="responsive-img" alt="Admin Final" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/imadatavis_patron2.png" class="responsive-img" alt="Patron Final" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p><strong>Evaluation and Future Plans</strong></p>
-					<p>Feedback from the IMA staff confirmed that our tool is well on its way to meeting their organizational goals. However, as we move on from this phase of the project, we recognize a number of future design opportunities. Tableau has limitations on the types of controls, design, and responsiveness we are able to implement for the current iteration of our tool. We wish to adapt our tool using D3, a Javascript programming library. D3 affords us more control over the visual and programming elements of the visualization than Tableau.
-					</p>
-					<p>
-					We plan to continue working with the IMA staff to develop the final iteration of our patron-facing tool. Our goal is to host the visualization on the IMA’s main website for guests to use, while the administrative tool will be available only to the IMA staff. The next immediate step would be to standardize procedures for data input into the Google Drive so administrators could easily feed information into the visualizations.
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- Other Pages -->
-		<div class="grey lighten-2">
-			<div class="container links" id="links">
-			    <div class="row">
-
-			    	<!--Virtual Phone-->
-			    	<!-- <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="vp">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Virtual Phone</h3>
-			    			</div>
-			    		</div>
-				    </div> -->
-
-				    <!--Spartaga-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Spartaga</h3>
-			    			</div>
-			    		</div>
-				    </div>
-				    
-			    	<!--Space-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="space">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Wizard-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="wizard">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Spell prototypes</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Kayak-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="kayak">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Kayak Simulator</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Bellhapp-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Bellhapp</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Fragments-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="fragments">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Fragments</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Hackathon-->
-			        <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--LunarLander-->
-				    <!-- <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Lunar Lander</h3>
-			    			</div>
-			    		</div>
-				    </div> -->
-
-				    <!--IMADatavis-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">IMA Datavis</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Quadcopter-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
-			    			<a href="projects/quadcopter.html"><div></div></a>
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Quadcopter Controls</h3>
-			    			</div>
-			    		</div>
-				    </div>
-				</div>
-		    </div>
-		</div>
-
-		<footer class="deep-purple darken-1">
-	      	<div class="footer-copyright">
-	        	<div class="container">
-	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
-	        	</div>
-	      	</div>
-	    </footer>
-	</body>
+<html lang="en">
+
+	<head>
+
+		<title>IMA Datavis</title>
+
+
+
+		<link rel='shortcut icon' type='image/x-icon' href='../images/maxface.png'/>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<script type="text/javascript" src="../js/velocity.min.js"></script>
+
+		<script type="text/javascript" src="../js/projectLogic.js"></script>
+
+
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+		<!-- CSS and JS -->
+
+		<link rel="stylesheet" href="../css/animate.min.css">
+
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+
+	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
+
+	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
+
+
+
+	 	<!-- jQuery is required by Materialize to function -->
+
+
+
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	    <script type="text/javascript" src="../js/materialize.min.js"></script>
+
+
+
+	</head>
+
+
+
+	<body>
+
+		<script>
+
+		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+
+		  	ga('create', 'UA-83745844-1', 'auto');
+
+		  	ga('send', 'pageview');
+
+		</script>
+
+		
+
+	    <!-- Header -->
+
+	    <a href="../index.html">
+
+	    	<img id="projectLogo" src="../images/maxface.png" alt="flat max">
+
+		</a>
+
+	    <div class="project-intro deep-purple darken-1 z-depth-1">
+
+	        <h1 class="grey-text text-lighten-5">UW IMA Activity Scheduling Tool</h1>
+
+	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">UX Design, User Research, Tableau Implementation</h5>
+
+	    </div>
+
+
+
+		<div class="container">
+
+			<div class="row">
+
+
+
+				<!-- project content -->
+
+				<div class="col s12 m12 l12">
+
+					<p><strong>Motivation:</strong>
+
+					</p>
+
+					<p>
+
+					The University of Washington Intramural Activities Building (IMA) is a daily hub for physical activity. Thousands of students, faculty, and guests attend the facility each quarter to exercise utilizing the gym equipment and the spaces it provides. Over the last few years, the IMA has sought a way to visualize patterns of guest activity in order to plan programming and special events at its facilities. They want to identify optimal times to ensure space availability and maximize the attendance of these events. The IMA staff  also intend to use such a data visualization to tailor outreach and advertising campaigns toward specific user groups. Furthermore, the IMA staff also seek a tool to help its patron guests plan their activities using information on prior attendance trends.
+
+					</p>
+
+					<p>
+
+					The data kept by the IMA thus far has been in both handwritten format and excel sheets. Stephen Few said that the choices you make when displaying quantitative information “depend primarily on your story.” In this case, the table format provided by excel is useless when trying to tell the story describing attendance trends at the IMA. Instead, we intend to design and develop interactive tools grounded in established data visualization principles to visualize guest attendance and activity patterns in accordance with IMA staff requests.
+
+					</p>
+
+					<p>
+
+					The target users for this visualization include both IMA staff and IMA patron guests. The IMA staff have worked closely with my team for the purposes of designing a visualization to satisfy their needs. As a result of a three month design process, my team of four students has developed two visualization tools and a high-fidelity prototype of a third tool to meet the stakeholder goals. 
+
+					</p>
+
+					<p><strong>Process Summary:</strong></p>
+
+					<p>The design process that my team decided on can be broken into two phases. The first phase results in prototypes and the second produce our final project for the class, but we are not done iterating on the design.
+
+					</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/imadatavis_summary.png" class="responsive-img" alt="Process Summary" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p><strong>Design Process:</strong></p>
+
+					<p><strong>1st Iteration</strong></p>
+
+					<p>We started out our project by gathering requirements, exploring possible designs, and exploring the data. In order to gather requirements we decided to focus on two groups of stakeholders: IMA administration and IMA patrons. We conducted initial interviews with IMA staff and patrons. Two of these interviews were conducted with IMA administration in order to gather requirements and hear from users of our intended visualization tool. These interviews were conducted informally, asking questions pertaining to what the staff request the tool to do and the task they would like it to perform. Three more of these interviews were conducted with IMA patrons that used different facilities at the IMA and came from different backgrounds (students, professors, swimmers, weight-lifters, etc.) Through these interviews we were able to better understand who we were designing for and move into the next step of the design process which was sketching and exploring possible designs. 
+
+					</p>
+
+					<p>
+
+					Our first sketching sessions was meant to quickly throw out as many ideas as we could in order to narrow down where we wanted to go with the visualization tool. Some of our sketches can be found below. After about 10 minutes of sketching out ideas by ourselves, we got together to discus the positive and negative implications of each design. For example while we loved the idea of a heat-map of how busy each individual section of the IMA was at a certain time, there was no way to actually get that data since the staff did not keep track of every section within the IMA. Some of our sketches can be found below.
+
+					</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/imadatavis_sketch1.jpg" class="responsive-img" alt="Sketch1" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/imadatavis_sketch2.jpg" class="responsive-img" alt="Sketch2" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/imadatavis_sketch3.jpg" class="responsive-img" alt="Sketch3" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p>Although we had an idea of the data we were able to use from our interviews with the IMA staff, we could not actually get our hands on the data until after we generated some design ideas. After our sketches, we formatted the data to a more Tableau-friendly format and started exploring the data and what design ideas were actually possible within Tableau. After exploring the data we made a couple big changes to our project. We were previously interested in including a way to observe changes in attendance based on the weather. However, once we got both datasets into Tableau, we saw that there was really no interesting correlation. The main change that we made was deciding on creating two tools, one for administrative use and one for patron use. After talking to both administrative and patron stakeholders and seeing the actual data that we had, we saw that the administration and patrons had different goals. The administration wanted a higher-level look at the attendance and demographic paterns on a quaterly-yearly scale, while the patrons expressed more interest on planning their workout times on a daily level. After exploring the data, we saw that we could definitely use this data to meet each stakeholders needs separately. We brought our first iteration to an end by prototyping two fully interactive and testable tools in Tableau.
+
+					</p>
+
+					<p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/imadatavis_admin1.jpg" class="responsive-img" alt="Admin Prototype" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/imadatavis_patron1.jpg" class="responsive-img" alt="Patron Prototype" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p><strong>2nd Iteration</strong></p>
+
+					<p>We knew that the goal of our second iteration was a final tool, so we had our work cut out for us. Before anything else, we conducted multiple usability tests on both prototypes. We came up with a few tasks for each of the two stakeholders and asked them to try and complete the tasks. After that we let the participants play around with the tool and give us any feedback that they had. We got tons of great feedback on the first prototypes but the general consensus was that they loved the idea and the information presented in the tools, but the usability could use some real work. There was also a bit of unnecessary information displayed in the administrative prototype that we got rid of.
+
+					</p>
+
+					<p>
+
+					The redesign of our initial prototypes was driven by the results of the user tests conducted. The administrative tool changed in three major ways. The most apparent change was that we split the dashboard up into three separate views, rather than four. While our users were able to interact with the visualization, they found it to be cluttered, especially with the bottom graph. To help solve this even further, we split the administrative tool into a general IMA attendance visualization, a pool visualization, and a comparison between the IMA and the pool. This allowed for us to eliminate clutter and improve the user’s experience with perception and interaction. The second change we made was to eliminate redundant information. The bar graph at the bottom of the tool compared total the median number of attendees between different days of the week. This is something we removed from the final tool since the user found the huge blocks of color to be distracting and not helpful overall. The huge blocks of color also goes against Tufte’s data to ink ratio since there was a large amount of ink representing information that the user could get from other parts of the tool. Another change we made was to the overview presented in the “Attendees per hour” graph which we will discuss further in the “Evaluation” section. The last change we made was to the filters. We had a bit of trouble with Tableau showing filters that we did not want to be available to the user, mostly because they were not at all useful to them. In our final tool we finally found a way to only include the filters that the users actually needed. We also included a filter displaying particular quarters, so the user doesn’t have to use a slider to choose time ranges of interest.
+
+					</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/imadatavis_admin2.png" class="responsive-img" alt="Admin Final" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/imadatavis_patron2.png" class="responsive-img" alt="Patron Final" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p><strong>Evaluation and Future Plans</strong></p>
+
+					<p>Feedback from the IMA staff confirmed that our tool is well on its way to meeting their organizational goals. However, as we move on from this phase of the project, we recognize a number of future design opportunities. Tableau has limitations on the types of controls, design, and responsiveness we are able to implement for the current iteration of our tool. We wish to adapt our tool using D3, a Javascript programming library. D3 affords us more control over the visual and programming elements of the visualization than Tableau.
+
+					</p>
+
+					<p>
+
+					We plan to continue working with the IMA staff to develop the final iteration of our patron-facing tool. Our goal is to host the visualization on the IMA’s main website for guests to use, while the administrative tool will be available only to the IMA staff. The next immediate step would be to standardize procedures for data input into the Google Drive so administrators could easily feed information into the visualizations.
+
+					</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<!-- Other Pages -->
+
+		<div class="grey lighten-2">
+
+			<div class="container links" id="links">
+
+			    <div class="row">
+
+
+
+			    	<!--Virtual Phone-->
+
+			    	<!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="vp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Virtual Phone</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+
+
+				    <!--Spartaga-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spartaga</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				    
+
+			    	<!--Space-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="space">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Wizard-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="wizard">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spell prototypes</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Kayak-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="kayak">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Kayak Simulator</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Bellhapp-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Bellhapp</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Fragments-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="fragments">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Fragments</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Hackathon-->
+
+			        <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--LunarLander-->
+
+				    <!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Lunar Lander</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+
+
+				    <!--IMADatavis-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">IMA Datavis</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Quadcopter-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
+
+			    			<a href="projects/quadcopter.html"><div></div></a>
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Quadcopter Controls</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				</div>
+
+		    </div>
+
+		</div>
+
+
+
+		<footer class="deep-purple darken-1">
+
+	      	<div class="footer-copyright">
+
+	        	<div class="container">
+
+	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
+
+	        	</div>
+
+	      	</div>
+
+	    </footer>
+
+	</body>
+
 </html>

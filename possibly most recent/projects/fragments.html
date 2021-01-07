@@ -1,256 +1,511 @@
-<html lang="en">
-	<head>
-		<link rel='shortcut icon' type='image/x-icon' href='../images/FlatProfile_Max_NoBack_BW.png'/>
-		
-		<title>Fragments</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script type="text/javascript" src="../js/velocity.min.js"></script>
-		<script type="text/javascript" src="../js/projectLogic.js"></script>
-
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<!-- CSS and JS -->
-		<link rel="stylesheet" href="../css/animate.min.css">
-		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
-	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
-
-	 	<!-- jQuery is required by Materialize to function -->
-
-	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	    <script type="text/javascript" src="../js/materialize.min.js"></script>
-
-	</head>
-
-	<body>
-		<script>
-		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  	ga('create', 'UA-83745844-1', 'auto');
-		  	ga('send', 'pageview');
-		</script>
-		
-	    <!-- Header -->
-	    <a href="../index.html">
-	    	<img id="projectLogo" src="../images/FlatProfile_Max_NoBack_BW.png" alt="flat max">
-		</a>
-	    <div class="project-intro deep-purple darken-1 z-depth-1">
-	        <h1 class="grey-text text-lighten-5">Fragments</h1>
-	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">Game designer, Game developer, UI Designer, UX Researcher, 3d Modeling</h5>
-	    </div>
-
-		<div class="container">
-			<div class="row">
-
-				<!-- project content -->
-				<div class="col s12 m12 l12">
-					<p><strong>Motivation:</strong></p>
-					<p>The experience of generalized anxiety disorder (GAD) is often stigmatized and misunderstood by those without anxiety. There are few interactive media forms that focus on themes of anxiety. Of those that do, the vast majority are intended to induce anxiety and provide shock-value without representing an overcoming of such experiences. Fragments uses the HTC Vive Virtual Reality Headset as an exploratory medium for representing a fictional experience through anxiety. Using dramatic storytelling, domain research, and principles of immersion, we aim to present a positive, fantasy adventure about a personal experience of overcoming anxiety. Fragments will simulate symptoms of anxiety to help those without anxiety understand these experiences as well as critique the stigma toward anxiety. Our audience will be traversing a world rife in metaphor and symbolism that will encourage those with or without anxiety to discuss together.</p>
-					<p><strong>Gameplay and Mechanics</strong></p>
-					<p>Fragments is an explorative puzzle game that aims to create a virtual reality experience that simulates anxiety to the users. Through doing this it enables them to experience the physical effects of anxiety, while also fueling their engagement so that people who do not understand or care about anxiety can get a better understanding of the actual physical and emotional response of varying types of anxiety disorders.</p>
-					<p>The player discovers their main tool, a crystal flashlight, very early in the game. Every puzzle in the game is centered on this flashlight and the idea of lighting up the darkness. Players can use the flashlight to see in the dark corners of the world, use the beam of light to interact with objects, and use the flashlight itself as a key to unlock new paths. These are all visualized below.</p>
-  					<div class="row">
-						<div class="col s12 m12 l12">
-							<img src="../images/fragments_flashlight.gif" class="responsive-img" alt="the flashlight" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Basic use of the flashlight, seeing in the darkness.</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s12 m12 l12">
-							<img src="../images/fragments_laser.gif" class="responsive-img" alt="manipulating light beams" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Using the flashlight to aim beams of light at a light-activated gem.</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s12 m12 l12">
-							<img src="../images/fragments_opendoor.gif" class="responsive-img" alt="opening doors" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Using the flashlight as a key to open a door.</p>
-						</div>
-					</div>
-					<p>Eventually the player realizes they are not alone in their world of darkness. Shadow monsters emerge from the darkness and force the player to physically crouch and hide behind objects in the game in order to avoid the sight of the monsters. The monsters also cause what we call “anxiety attacks” in the player. These attacks make the player experience real symptoms of anxiety that we found in our research. </p>
-					<div class="row">
-						<div class="col s12 m12 l12">
-							<img src="../images/fragments_monster.gif" class="responsive-img" alt="Running from monsters" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>The player runs into a monster while running through a hallway.</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s12 m12 l12">
-							<img src="../images/fragments_monsterIngame.PNG" class="responsive-img" alt="Monsters" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>Here is a better look at one of our monsters.</p>
-						</div>
-					</div>
-
-					<p><strong>My Role in the Design and Development Process:</strong></p>
-					<p>During this project we had access to two technical directors at Microsoft who had lots of experience producing games and knew the ins and outs of the game development process. Because of this, I wanted to get as much experience with every part of the game development process as I could. While most of my time was spent on game design and UI design, I also tried to spend time developing and user testing just to understand what a professional career in those fields would entail. Our group's process is outlined below. Throughout the rest of this webpage I will talk about what I did in UI design, and game design.</p>
-					<div class="row">
-						<div class="col s12 m12 l12">
-							<img src="../images/fragments_process.png" class="responsive-img" alt="Our design process" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p><strong>UI design</strong></p>
-					<p>Our team decided right from the beginning that we wanted our UI to be as easy to understand and intuitive as possible. The only player actions we needed in the game were movement and the ability to pick up objects. We used these actions to create different mechanics, but those are it as far as controller input goes. This made designing an interface for the user to be fairly simple. I started thinking about the interface design by playing many other vive games on the market.</p>
-					<p>While conducting competitive analysis on other vive games, I found that most games used the trigger to pick up objects. I also found that in most games the user was required to hold the trigger down in order to keep holding on to an object. I thought that this made sense in games where a user is only expected to hold onto an object for a short period of time, but could be tiresome if the user had to hold the object for long periods of time. Through user testing we found that people who have used a vive before had already been taught to hold the trigger when holding an object, and it was difficult for them to break that habit. However, people who had not used the vive before thought it was more natural to only click the trigger once to pick something up and then click it again to set it down. We ended up having a larger target audience than just people who have previously used the vive, so I decided to not make the player hold the trigger down to hold an object.</p>
-					<p>Movement was debated for a while longer than holding objects. I found VR games tend to use either teleportation or the trackpads in order to move. The problem with teleportation is that it does not make much sense for many games. In our case, we wanted the user to have very little control over the world around them and for them to feel small and weak. We found through user tests that teleportation makes the user feel the opposite, so we decided to use the trackpads for movement. There were two main problems with the vive trackpads for movement: motion sickness and tracking issues. While most players did not feel any motion sickness in our game, there were a few that did get motion sickness while using the trackpad to move. Part of the issue was that the trackpads on the vive controllers we were using seemed to have tracking issues sometimes and would not always register where the player’s thumb was on the trackpad. Often times players would be moving very slowly and then suddenly start sprinting when the controller realized that their thumb was on the outside of the trackpad. When making future games or applications, I think that it will be important to build the game with movement in mind from the very beginning. FPS movement in VR is still an issue, so it would be better if it could be avoided entirely.</p>
-					<div class="row" style="text-align: center;">
-						<div class="col s12 m12 l12">
-							<img src="../images/fragments_controls.png" class="responsive-img" alt="controls" style="display: block; margin-left: auto; margin-right: auto;">
-							<p>The controls of the game...simple right? Putting most of the control on players actually moving their body helped them accept running around in a virtual world.</p>
-						</div>
-					</div>
-					<p><strong>Game Design</strong></p>
-					<p>Much of what I did on the Fragments project was level design and setup. This involved designing the puzzles that the player would solve and deciding what the architecture around the puzzles would look like. I also 3d modeled almost everything seen in the game in Maya with the exception of decorative rocks. While I am not a professional 3d artist, I know enough about Maya and 3ds Max to create custom objects and characters for the sake of prototyping and low-poly games.</p>
-					<p>All of our level designing started on a whiteboard. This was one of the only parts of the project that everyone in the group worked on together since we wanted to all be happy with how the puzzles turned out. Lots of what I did was, after we all agreed on a level and puzzle design, creating the required 3d assets and creating the scene in unity. Below you can see some sketches of the main two puzzles and then the puzzles put together in unity.</p>
-					<div class="row">
-						<div class="col s12 m6 l6">
-							<img src="../images/fragments_level1sketch.jpg" class="responsive-img" alt="sketch" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-						<div class="col s12 m6 l6">
-							<img src="../images/fragments_finaltower2.PNG" class="responsive-img" alt="level 1" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s12 m12 l12">
-							<img src="../images/fragments_level1.PNG" class="responsive-img" alt="level 1 layout" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s12 m6 l6">
-							<img src="../images/fragments_level2sketch.jpg" class="responsive-img" alt="sketch" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-						<div class="col s12 m6 l6">
-							<img src="../images/fragments_betterlevel2sketch.jpg" class="responsive-img" alt="better sketch" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s12 m12 l12">
-							<img src="../images/fragments_level2.PNG" class="responsive-img" alt="level 2" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p>I found that really liked designing levels and got pretty good at assembling them in unity as well. I was able to use my UX design experience while designing the levels and also while iterating over them through user testing.</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- Other Pages -->
-		<!-- Other Pages -->
-		<div class="grey lighten-2">
-			<div class="container links" id="links">
-			    <div class="row">
-
-			    	<!--Virtual Phone-->
-			    	<!-- <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="vp">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Virtual Phone</h3>
-			    			</div>
-			    		</div>
-				    </div> -->
-
-				    <!--Spartaga-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Spartaga</h3>
-			    			</div>
-			    		</div>
-				    </div>
-				    
-			    	<!--Space-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="space">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Wizard-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="wizard">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Spell prototypes</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Kayak-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="kayak">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Kayak Simulator</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Bellhapp-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Bellhapp</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Fragments-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="fragments">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Fragments</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Hackathon-->
-			        <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--LunarLander-->
-				    <!-- <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Lunar Lander</h3>
-			    			</div>
-			    		</div>
-				    </div> -->
-
-				    <!--IMADatavis-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">IMA Datavis</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Quadcopter-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
-			    			<a href="projects/quadcopter.html"><div></div></a>
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Quadcopter Controls</h3>
-			    			</div>
-			    		</div>
-				    </div>
-				</div>
-		    </div>
-		</div>
-
-		<footer class="deep-purple darken-1">
-	      	<div class="footer-copyright">
-	        	<div class="container">
-	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
-	        	</div>
-	      	</div>
-	    </footer>
-	</body>
+﻿<html lang="en">
+
+	<head>
+
+		<link rel='shortcut icon' type='image/x-icon' href='../images/maxface.png'/>
+
+		
+
+		<title>Fragments</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<script type="text/javascript" src="../js/velocity.min.js"></script>
+
+		<script type="text/javascript" src="../js/projectLogic.js"></script>
+
+
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+		<!-- CSS and JS -->
+
+		<link rel="stylesheet" href="../css/animate.min.css">
+
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+
+	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
+
+	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
+
+
+
+	 	<!-- jQuery is required by Materialize to function -->
+
+
+
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	    <script type="text/javascript" src="../js/materialize.min.js"></script>
+
+
+
+	</head>
+
+
+
+	<body>
+
+		<script>
+
+		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+
+		  	ga('create', 'UA-83745844-1', 'auto');
+
+		  	ga('send', 'pageview');
+
+		</script>
+
+		
+
+	    <!-- Header -->
+
+	    <a href="../index.html">
+
+	    	<img id="projectLogo" src="../images/maxface.png" alt="flat max">
+
+		</a>
+
+	    <div class="project-intro deep-purple darken-1 z-depth-1">
+
+	        <h1 class="grey-text text-lighten-5">Fragments</h1>
+
+	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">Game designer, Game developer, UI Designer, UX Researcher, 3d Modeling</h5>
+
+	    </div>
+
+
+
+		<div class="container">
+
+			<div class="row">
+
+
+
+				<!-- project content -->
+
+				<div class="col s12 m12 l12">
+
+					<p><strong>Motivation:</strong></p>
+
+					<p>The experience of generalized anxiety disorder (GAD) is often stigmatized and misunderstood by those without anxiety. There are few interactive media forms that focus on themes of anxiety. Of those that do, the vast majority are intended to induce anxiety and provide shock-value without representing an overcoming of such experiences. Fragments uses the HTC Vive Virtual Reality Headset as an exploratory medium for representing a fictional experience through anxiety. Using dramatic storytelling, domain research, and principles of immersion, we aim to present a positive, fantasy adventure about a personal experience of overcoming anxiety. Fragments will simulate symptoms of anxiety to help those without anxiety understand these experiences as well as critique the stigma toward anxiety. Our audience will be traversing a world rife in metaphor and symbolism that will encourage those with or without anxiety to discuss together.</p>
+
+					<p><strong>Gameplay and Mechanics</strong></p>
+
+					<p>Fragments is an explorative puzzle game that aims to create a virtual reality experience that simulates anxiety to the users. Through doing this it enables them to experience the physical effects of anxiety, while also fueling their engagement so that people who do not understand or care about anxiety can get a better understanding of the actual physical and emotional response of varying types of anxiety disorders.</p>
+
+					<p>The player discovers their main tool, a crystal flashlight, very early in the game. Every puzzle in the game is centered on this flashlight and the idea of lighting up the darkness. Players can use the flashlight to see in the dark corners of the world, use the beam of light to interact with objects, and use the flashlight itself as a key to unlock new paths. These are all visualized below.</p>
+
+  					<div class="row">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/fragments_flashlight.gif" class="responsive-img" alt="the flashlight" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Basic use of the flashlight, seeing in the darkness.</p>
+
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/fragments_laser.gif" class="responsive-img" alt="manipulating light beams" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Using the flashlight to aim beams of light at a light-activated gem.</p>
+
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/fragments_opendoor.gif" class="responsive-img" alt="opening doors" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Using the flashlight as a key to open a door.</p>
+
+						</div>
+
+					</div>
+
+					<p>Eventually the player realizes they are not alone in their world of darkness. Shadow monsters emerge from the darkness and force the player to physically crouch and hide behind objects in the game in order to avoid the sight of the monsters. The monsters also cause what we call “anxiety attacks” in the player. These attacks make the player experience real symptoms of anxiety that we found in our research. </p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/fragments_monster.gif" class="responsive-img" alt="Running from monsters" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>The player runs into a monster while running through a hallway.</p>
+
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/fragments_monsterIngame.PNG" class="responsive-img" alt="Monsters" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>Here is a better look at one of our monsters.</p>
+
+						</div>
+
+					</div>
+
+
+
+					<p><strong>My Role in the Design and Development Process:</strong></p>
+
+					<p>During this project we had access to two technical directors at Microsoft who had lots of experience producing games and knew the ins and outs of the game development process. Because of this, I wanted to get as much experience with every part of the game development process as I could. While most of my time was spent on game design and UI design, I also tried to spend time developing and user testing just to understand what a professional career in those fields would entail. Our group's process is outlined below. Throughout the rest of this webpage I will talk about what I did in UI design, and game design.</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/fragments_process.png" class="responsive-img" alt="Our design process" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p><strong>UI design</strong></p>
+
+					<p>Our team decided right from the beginning that we wanted our UI to be as easy to understand and intuitive as possible. The only player actions we needed in the game were movement and the ability to pick up objects. We used these actions to create different mechanics, but those are it as far as controller input goes. This made designing an interface for the user to be fairly simple. I started thinking about the interface design by playing many other vive games on the market.</p>
+
+					<p>While conducting competitive analysis on other vive games, I found that most games used the trigger to pick up objects. I also found that in most games the user was required to hold the trigger down in order to keep holding on to an object. I thought that this made sense in games where a user is only expected to hold onto an object for a short period of time, but could be tiresome if the user had to hold the object for long periods of time. Through user testing we found that people who have used a vive before had already been taught to hold the trigger when holding an object, and it was difficult for them to break that habit. However, people who had not used the vive before thought it was more natural to only click the trigger once to pick something up and then click it again to set it down. We ended up having a larger target audience than just people who have previously used the vive, so I decided to not make the player hold the trigger down to hold an object.</p>
+
+					<p>Movement was debated for a while longer than holding objects. I found VR games tend to use either teleportation or the trackpads in order to move. The problem with teleportation is that it does not make much sense for many games. In our case, we wanted the user to have very little control over the world around them and for them to feel small and weak. We found through user tests that teleportation makes the user feel the opposite, so we decided to use the trackpads for movement. There were two main problems with the vive trackpads for movement: motion sickness and tracking issues. While most players did not feel any motion sickness in our game, there were a few that did get motion sickness while using the trackpad to move. Part of the issue was that the trackpads on the vive controllers we were using seemed to have tracking issues sometimes and would not always register where the player’s thumb was on the trackpad. Often times players would be moving very slowly and then suddenly start sprinting when the controller realized that their thumb was on the outside of the trackpad. When making future games or applications, I think that it will be important to build the game with movement in mind from the very beginning. FPS movement in VR is still an issue, so it would be better if it could be avoided entirely.</p>
+
+					<div class="row" style="text-align: center;">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/fragments_controls.png" class="responsive-img" alt="controls" style="display: block; margin-left: auto; margin-right: auto;">
+
+							<p>The controls of the game...simple right? Putting most of the control on players actually moving their body helped them accept running around in a virtual world.</p>
+
+						</div>
+
+					</div>
+
+					<p><strong>Game Design</strong></p>
+
+					<p>Much of what I did on the Fragments project was level design and setup. This involved designing the puzzles that the player would solve and deciding what the architecture around the puzzles would look like. I also 3d modeled almost everything seen in the game in Maya with the exception of decorative rocks. While I am not a professional 3d artist, I know enough about Maya and 3ds Max to create custom objects and characters for the sake of prototyping and low-poly games.</p>
+
+					<p>All of our level designing started on a whiteboard. This was one of the only parts of the project that everyone in the group worked on together since we wanted to all be happy with how the puzzles turned out. Lots of what I did was, after we all agreed on a level and puzzle design, creating the required 3d assets and creating the scene in unity. Below you can see some sketches of the main two puzzles and then the puzzles put together in unity.</p>
+
+					<div class="row">
+
+						<div class="col s12 m6 l6">
+
+							<img src="../images/fragments_level1sketch.jpg" class="responsive-img" alt="sketch" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+						<div class="col s12 m6 l6">
+
+							<img src="../images/fragments_finaltower2.PNG" class="responsive-img" alt="level 1" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/fragments_level1.PNG" class="responsive-img" alt="level 1 layout" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col s12 m6 l6">
+
+							<img src="../images/fragments_level2sketch.jpg" class="responsive-img" alt="sketch" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+						<div class="col s12 m6 l6">
+
+							<img src="../images/fragments_betterlevel2sketch.jpg" class="responsive-img" alt="better sketch" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col s12 m12 l12">
+
+							<img src="../images/fragments_level2.PNG" class="responsive-img" alt="level 2" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p>I found that really liked designing levels and got pretty good at assembling them in unity as well. I was able to use my UX design experience while designing the levels and also while iterating over them through user testing.</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<!-- Other Pages -->
+
+		<!-- Other Pages -->
+
+		<div class="grey lighten-2">
+
+			<div class="container links" id="links">
+
+			    <div class="row">
+
+
+
+			    	<!--Virtual Phone-->
+
+			    	<!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="vp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Virtual Phone</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+
+
+				    <!--Spartaga-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spartaga</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				    
+
+			    	<!--Space-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="space">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Wizard-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="wizard">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spell prototypes</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Kayak-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="kayak">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Kayak Simulator</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Bellhapp-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Bellhapp</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Fragments-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="fragments">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Fragments</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Hackathon-->
+
+			        <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--LunarLander-->
+
+				    <!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Lunar Lander</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+
+
+				    <!--IMADatavis-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">IMA Datavis</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Quadcopter-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
+
+			    			<a href="projects/quadcopter.html"><div></div></a>
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Quadcopter Controls</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				</div>
+
+		    </div>
+
+		</div>
+
+
+
+		<footer class="deep-purple darken-1">
+
+	      	<div class="footer-copyright">
+
+	        	<div class="container">
+
+	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
+
+	        	</div>
+
+	      	</div>
+
+	    </footer>
+
+	</body>
+
 </html>

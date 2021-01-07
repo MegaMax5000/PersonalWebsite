@@ -1,243 +1,485 @@
-<html lang="en">
-	<head>
-		<title>Quadcopter</title>
-
-		<link rel='shortcut icon' type='image/x-icon' href='../images/FlatProfile_Max_NoBack_BW.png'/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script type="text/javascript" src="../js/velocity.min.js"></script>
-		<script type="text/javascript" src="../js/projectLogic.js"></script>
-
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<!-- CSS and JS -->
-		<link rel="stylesheet" href="../css/animate.min.css">
-		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
-	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
-
-	 	<!-- jQuery is required by Materialize to function -->
-
-	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	    <script type="text/javascript" src="../js/materialize.min.js"></script>
-
-	</head>
-
-	<body>
-		<script>
-		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  	ga('create', 'UA-83745844-1', 'auto');
-		  	ga('send', 'pageview');
-		</script>
-		
-	    <!-- Header -->
-	    <a href="../index.html">
-	    	<img id="projectLogo" src="../images/FlatProfile_Max_NoBack_BW.png" alt="flat max">
-		</a>
-	    <div class="project-intro deep-purple darken-1 z-depth-1">
-	        <h1 class="grey-text text-lighten-5">Gesture-controlled Quadcopter</h1>
-	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">UI Designer, UX Researcher</h5>
-	    </div>
-
-		<div class="container">
-			<div class="row">
-
-				<!-- project content -->
-				<div class="col s12 m12 l12">
-					<p><strong>Motivation:</strong></p>
-					<p>
-					Anyone that has ever tried to control a quadcopter before probably knows how difficult it is. It gets easier, but only with lots of practice, countless crashes, and possible broken parts. My team and I decided to create a more user-friendly method of controlling a quadcopter.
-					</p>
-					<p><strong>Design Process:</strong>
-					<p>I worked with three other students (Dan, Mark, and Long). We only had 3 days to come up with some kind of significant research. This is obviously not enough time for four non electrical engineering students to create a quadcopter with gesture based controls, so the purpose of the project was to run user testing using a “Wizard of Oz” style approach.
-					</p>
-					<p>
-					Dan had a quadcopter and knew how to fly it well enough to fool a user tester. We wanted to make the testing seem as authentic as possible (to try and get usable data from the tester), so we designed gloves that looked the part. While they do not actually do anything, they were convincing enough to fool each of our testers (both of which have been working with electronics for a few years).
-					</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/project6_gloves.png" class="responsive-img" alt="The gloves we used to fool the participants" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p>
-					The next step was to decide on what gestures we would use to control the quadcopter. We cam up with gestures to move the quadcopter up and down, left and right, and forwards and back. As you can see below, the controls were fairly basic and easy enough to learn with just a couple minutes of practice.
-					</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/project6_position1.png" class="responsive-img" alt="Landing position. This gesture will set the quadcopter on the ground." style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p>Landing position. This gesture will set the quadcopter on the ground.</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/project6_position2.png" class="responsive-img" alt="This Gesture specifies the height of the quadcopter. The hands can raise to a maximum of 1ft apart." style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p>This Gesture specifies the height of the quadcopter. The hands can raise to a maximum of 1ft apart.</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/project6_position3.png" class="responsive-img" alt="This will move the quadcopter backwards at the specified height. The reverse will move it forwards." style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p>This will move the quadcopter backwards at the specified height. The reverse will move it forwards.</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/project6_position4.png" class="responsive-img" alt="Moving the quadcopter right." style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p>Moving the quadcopter right.</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/project6_position5.png" class="responsive-img" alt="Moving the quadcopter left." style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p>Moving the quadcopter left.</p>
-					<p>Before the actual user tests, Dan had to practice believably controlling the quadcopter based on other peoples hand gestures. He got good at controlling the quadcopter strictly based on the user’s hands, rather than looking at the quadcopter. This allowed the user to “fail” and made the experience more believable.
-					</p>
-					<p>
-					The last thing we had to do before testing was set up the area to test the users while keeping Dan hidden enough to fool them. We ended up hiding Dan in plain site by putting him and the controller behind a laptop slightly behind the user. The users were focused enough on the quadcopter to never actually turn around and seem him controlling it. We also set up a course for the user to navigate through so that we could get information on how intuitive controlling the quadcopter was. The course consisted of numbered boxes on the ground that the moderators would instruct the user to fly to.
-					</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/project6_setup.png" class="responsive-img" alt="setup of the room" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-					<p><strong>Evaluation and Future Plans:</strong>
-					<p>The prototype ended up working very well and actually completely fooled both participants into thinking they were actually controlling the quadcopter. A video of a little bit of the user testing can be found here. As far as the actual testing, there wasn’t much that the team would have changed. The testing was effective and supplied valuable data.
-					</p>
-					<p>
-					The testing showed us multiple implications for design that the team could use if actually implementing the product. The first was that the users kept running their hands into their chest when trying to back the quadcopter up. Another was that the users thought it would have been a little more natural to tilt or “bank” their hands to move around rather than move forward. This would do a better job of mimicking the quadcopter’s movement.
-					</p>
-					<p>
-					Overall, we learned a lot about “Wizard of Oz” style research and got a lot of data from user testing that we could use to actually implement the project.
-					</p>
-					<div class="row">
-						<div class="col s12 m12 l10 offset-l1">
-							<img src="../images/project6_team.png" class="responsive-img" alt="The team" style="display: block; margin-left: auto; margin-right: auto;">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Other Pages -->
-		<div class="grey lighten-2">
-			<div class="container links" id="links">
-			    <div class="row">
-
-			    	<!--Virtual Phone-->
-			    	<!-- <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="vp">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Virtual Phone</h3>
-			    			</div>
-			    		</div>
-				    </div> -->
-				    
-				    <!--Spartaga-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Spartaga</h3>
-			    			</div>
-			    		</div>
-				    </div>
-				    
-			    	<!--Space-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="space">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Wizard-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="wizard">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Spell prototypes</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Kayak-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="kayak">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Kayak Simulator</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Bellhapp-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Bellhapp</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Fragments-->
-			    	<div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="fragments">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Fragments</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Hackathon-->
-			        <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--LunarLander-->
-				    <!-- <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Lunar Lander</h3>
-			    			</div>
-			    		</div>
-				    </div> -->
-
-				    <!--IMADatavis-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">IMA Datavis</h3>
-			    			</div>
-			    		</div>
-				    </div>
-
-				    <!--Quadcopter-->
-				    <div class="col s12 m6 l4">
-			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
-			    			<a href="projects/quadcopter.html"><div></div></a>
-			    			<div class="projectInner">
-			    				<h3 class="linkTitle">Quadcopter Controls</h3>
-			    			</div>
-			    		</div>
-				    </div>
-				</div>
-		    </div>
-		</div>
-
-		<footer class="deep-purple darken-1">
-	      	<div class="footer-copyright">
-	        	<div class="container">
-	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
-	        	</div>
-	      	</div>
-	    </footer>
-	</body>
+<html lang="en">
+
+	<head>
+
+		<title>Quadcopter</title>
+
+
+
+		<link rel='shortcut icon' type='image/x-icon' href='../images/maxface.png'/>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<script type="text/javascript" src="../js/velocity.min.js"></script>
+
+		<script type="text/javascript" src="../js/projectLogic.js"></script>
+
+
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+		<!-- CSS and JS -->
+
+		<link rel="stylesheet" href="../css/animate.min.css">
+
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+
+	 	<link type="text/css" rel="stylesheet" href="../css/style.css">
+
+	 	<link type="type/css" rel="stylesheet" href="../css/hover-min.css">
+
+
+
+	 	<!-- jQuery is required by Materialize to function -->
+
+
+
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	    <script type="text/javascript" src="../js/materialize.min.js"></script>
+
+
+
+	</head>
+
+
+
+	<body>
+
+		<script>
+
+		  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+		  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+		  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+		  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+
+		  	ga('create', 'UA-83745844-1', 'auto');
+
+		  	ga('send', 'pageview');
+
+		</script>
+
+		
+
+	    <!-- Header -->
+
+	    <a href="../index.html">
+
+	    	<img id="projectLogo" src="../images/maxface.png" alt="flat max">
+
+		</a>
+
+	    <div class="project-intro deep-purple darken-1 z-depth-1">
+
+	        <h1 class="grey-text text-lighten-5">Gesture-controlled Quadcopter</h1>
+
+	        <h5 class="deep-purple lighten-2 grey-text text-lighten-5">UI Designer, UX Researcher</h5>
+
+	    </div>
+
+
+
+		<div class="container">
+
+			<div class="row">
+
+
+
+				<!-- project content -->
+
+				<div class="col s12 m12 l12">
+
+					<p><strong>Motivation:</strong></p>
+
+					<p>
+
+					Anyone that has ever tried to control a quadcopter before probably knows how difficult it is. It gets easier, but only with lots of practice, countless crashes, and possible broken parts. My team and I decided to create a more user-friendly method of controlling a quadcopter.
+
+					</p>
+
+					<p><strong>Design Process:</strong>
+
+					<p>I worked with three other students (Dan, Mark, and Long). We only had 3 days to come up with some kind of significant research. This is obviously not enough time for four non electrical engineering students to create a quadcopter with gesture based controls, so the purpose of the project was to run user testing using a “Wizard of Oz” style approach.
+
+					</p>
+
+					<p>
+
+					Dan had a quadcopter and knew how to fly it well enough to fool a user tester. We wanted to make the testing seem as authentic as possible (to try and get usable data from the tester), so we designed gloves that looked the part. While they do not actually do anything, they were convincing enough to fool each of our testers (both of which have been working with electronics for a few years).
+
+					</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/project6_gloves.png" class="responsive-img" alt="The gloves we used to fool the participants" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p>
+
+					The next step was to decide on what gestures we would use to control the quadcopter. We cam up with gestures to move the quadcopter up and down, left and right, and forwards and back. As you can see below, the controls were fairly basic and easy enough to learn with just a couple minutes of practice.
+
+					</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/project6_position1.png" class="responsive-img" alt="Landing position. This gesture will set the quadcopter on the ground." style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p>Landing position. This gesture will set the quadcopter on the ground.</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/project6_position2.png" class="responsive-img" alt="This Gesture specifies the height of the quadcopter. The hands can raise to a maximum of 1ft apart." style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p>This Gesture specifies the height of the quadcopter. The hands can raise to a maximum of 1ft apart.</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/project6_position3.png" class="responsive-img" alt="This will move the quadcopter backwards at the specified height. The reverse will move it forwards." style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p>This will move the quadcopter backwards at the specified height. The reverse will move it forwards.</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/project6_position4.png" class="responsive-img" alt="Moving the quadcopter right." style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p>Moving the quadcopter right.</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/project6_position5.png" class="responsive-img" alt="Moving the quadcopter left." style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p>Moving the quadcopter left.</p>
+
+					<p>Before the actual user tests, Dan had to practice believably controlling the quadcopter based on other peoples hand gestures. He got good at controlling the quadcopter strictly based on the user’s hands, rather than looking at the quadcopter. This allowed the user to “fail” and made the experience more believable.
+
+					</p>
+
+					<p>
+
+					The last thing we had to do before testing was set up the area to test the users while keeping Dan hidden enough to fool them. We ended up hiding Dan in plain site by putting him and the controller behind a laptop slightly behind the user. The users were focused enough on the quadcopter to never actually turn around and seem him controlling it. We also set up a course for the user to navigate through so that we could get information on how intuitive controlling the quadcopter was. The course consisted of numbered boxes on the ground that the moderators would instruct the user to fly to.
+
+					</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/project6_setup.png" class="responsive-img" alt="setup of the room" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+					<p><strong>Evaluation and Future Plans:</strong>
+
+					<p>The prototype ended up working very well and actually completely fooled both participants into thinking they were actually controlling the quadcopter. A video of a little bit of the user testing can be found here. As far as the actual testing, there wasn’t much that the team would have changed. The testing was effective and supplied valuable data.
+
+					</p>
+
+					<p>
+
+					The testing showed us multiple implications for design that the team could use if actually implementing the product. The first was that the users kept running their hands into their chest when trying to back the quadcopter up. Another was that the users thought it would have been a little more natural to tilt or “bank” their hands to move around rather than move forward. This would do a better job of mimicking the quadcopter’s movement.
+
+					</p>
+
+					<p>
+
+					Overall, we learned a lot about “Wizard of Oz” style research and got a lot of data from user testing that we could use to actually implement the project.
+
+					</p>
+
+					<div class="row">
+
+						<div class="col s12 m12 l10 offset-l1">
+
+							<img src="../images/project6_team.png" class="responsive-img" alt="The team" style="display: block; margin-left: auto; margin-right: auto;">
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<!-- Other Pages -->
+
+		<div class="grey lighten-2">
+
+			<div class="container links" id="links">
+
+			    <div class="row">
+
+
+
+			    	<!--Virtual Phone-->
+
+			    	<!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="vp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Virtual Phone</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+				    
+
+				    <!--Spartaga-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="spartaga">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spartaga</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				    
+
+			    	<!--Space-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="space">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">"Space Game" Level Select</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Wizard-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="wizard">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Spell prototypes</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Kayak-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="kayak">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Kayak Simulator</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Bellhapp-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="bellhapp">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Bellhapp</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Fragments-->
+
+			    	<div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="fragments">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Fragments</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Hackathon-->
+
+			        <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="hackathon">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Seattle VR Hackathon</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--LunarLander-->
+
+				    <!-- <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="lunarlander">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Lunar Lander</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div> -->
+
+
+
+				    <!--IMADatavis-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="imadatavis">
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">IMA Datavis</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+
+
+				    <!--Quadcopter-->
+
+				    <div class="col s12 m6 l4">
+
+			    		<div class="projectLink hvr-grow-shadow" id="quadcopter">
+
+			    			<a href="projects/quadcopter.html"><div></div></a>
+
+			    			<div class="projectInner">
+
+			    				<h3 class="linkTitle">Quadcopter Controls</h3>
+
+			    			</div>
+
+			    		</div>
+
+				    </div>
+
+				</div>
+
+		    </div>
+
+		</div>
+
+
+
+		<footer class="deep-purple darken-1">
+
+	      	<div class="footer-copyright">
+
+	        	<div class="container">
+
+	        	<p class="grey-text text-lighten-4">Designed and created by Max Schreiber, 2016</p>
+
+	        	</div>
+
+	      	</div>
+
+	    </footer>
+
+	</body>
+
 </html>
