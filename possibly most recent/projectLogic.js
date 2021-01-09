@@ -48,4 +48,27 @@ $(document).ready(function() {
 		window.location = "quadcopter.html";
 	});
 
+	$("#vrprototypes").click(function(){
+
+		window.location = "vrPrototypes.html";
+
+	});
+
+	$("#trek").click(function(){
+
+		window.location = "trek.html";
+
+	});
+
+	$("#artifact").click(function(){
+
+		window.location = "artifact.html";
+
+	});
+
+	$("#megagame").click(function(){
+
+		window.location = "megaGame.html";
+
+	});
 });

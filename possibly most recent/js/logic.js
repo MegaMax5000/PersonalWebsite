@@ -189,25 +189,25 @@ $(document).ready(function() {
 
 	$("#vrprototypes").click(function(){
 
-		window.location = "vrPrototypes.html";
+		window.location = "./projects/vrPrototypes.html";
 
 	});
 
 	$("#trek").click(function(){
 
-		window.location = "trek.html";
+		window.location = "./projects/trek.html";
 
 	});
 
 	$("#artifact").click(function(){
 
-		window.location = "artifact.html";
+		window.location = "./projects/artifact.html";
 
 	});
 
 	$("#megagame").click(function(){
 
-		window.location = "megaGame.html";
+		window.location = "./projects/megaGame.html";
 
 	});
 
