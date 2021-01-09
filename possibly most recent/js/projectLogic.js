@@ -10,11 +10,57 @@ $(document).ready(function() {
 
 	});
 
+	$("#bowtoblood").click(function(){
 
+		window.location = "bowToBlood.html";
+
+	});
+
+	$("#wanderword").click(function(){
+
+		window.location = "wanderword.html";
+
+	});
+
+	$("#dop").click(function(){
+
+		window.location = "dop.html";
+
+	});
+
+	$("#minecraft").click(function(){
+
+		window.location = "minecraft.html";
+
+	});
 
 	$("#spartaga").click(function(){
 
-		window.location = "spartaga.html";
+		window.location = "spartagaMain.html";
+
+	});
+
+	$("#vrprototypes").click(function(){
+
+		window.location = "vrPrototypes.html";
+
+	});
+
+	$("#trek").click(function(){
+
+		window.location = "trek.html";
+
+	});
+
+	$("#artifact").click(function(){
+
+		window.location = "artifact.html";
+
+	});
+
+	$("#megagame").click(function(){
+
+		window.location = "megaGame.html";
 
 	});
 
@@ -46,7 +92,7 @@ $(document).ready(function() {
 
 	$("#bellhapp").click(function(){
 
-		window.location = "bellhapp.html";
+		window.location = "bellhappMain.html";
 
 	});
 

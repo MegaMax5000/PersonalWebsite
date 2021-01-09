@@ -87,7 +87,7 @@ $(document).ready(function() {
 
 	$("#spartaga").click(function(){
 
-		window.location = "./projects/spartaga.html";
+		window.location = "./projects/spartagaMain.html";
 
 	});
 
@@ -119,7 +119,7 @@ $(document).ready(function() {
 
 	$("#bellhapp").click(function(){
 
-		window.location = "./projects/bellhapp.html";
+		window.location = "./projects/bellhappMain.html";
 
 	});
 
@@ -160,6 +160,54 @@ $(document).ready(function() {
 	$("#quadcopter").click(function(){
 
 		window.location = "./projects/quadcopter.html";
+
+	});
+
+	$("#bowtoblood").click(function(){
+
+		window.location = "./projects/bowToBlood.html";
+
+	});
+
+	$("#wanderword").click(function(){
+
+		window.location = "./projects/wanderword.html";
+
+	});
+
+	$("#dop").click(function(){
+
+		window.location = "./projects/dop.html";
+
+	});
+
+	$("#minecraft").click(function(){
+
+		window.location = "./projects/minecraft.html";
+
+	});
+
+	$("#vrprototypes").click(function(){
+
+		window.location = "vrPrototypes.html";
+
+	});
+
+	$("#trek").click(function(){
+
+		window.location = "trek.html";
+
+	});
+
+	$("#artifact").click(function(){
+
+		window.location = "artifact.html";
+
+	});
+
+	$("#megagame").click(function(){
+
+		window.location = "megaGame.html";
 
 	});
 

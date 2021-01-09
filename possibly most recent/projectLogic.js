@@ -9,7 +9,7 @@ $(document).ready(function() {
 	});
 
 	$("#spartaga").click(function(){
-		window.location = "spartaga.html";
+		window.location = "spartagaMain.html";
 	});
 
 	$("#space").click(function(){
@@ -25,7 +25,7 @@ $(document).ready(function() {
 	});
 
 	$("#bellhapp").click(function(){
-		window.location = "bellhapp.html";
+		window.location = "bellhappMain.html";
 	});
 
 	$("#fragments").click(function(){

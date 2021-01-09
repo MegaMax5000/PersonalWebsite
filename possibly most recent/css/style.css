@@ -3,6 +3,7 @@ body, html
 {
 
     background-color: #EDEDED !important;
+    width:100%;
 
 }
 
@@ -571,12 +572,8 @@ footer
 
 
 
-#spartaga
-
-{
-
-    background-image: url(../images/space.PNG);
-
+#spartaga {
+    background-image: url(../images/spartagaSquare.jpg);
 }
 
 
@@ -619,6 +616,37 @@ footer
 
 }
 
+#bowtoblood {
+    background-image: url(../images/bowtoblood_logo.PNG);
+}
+
+#wanderword {
+    background-image: url(../images/wwlogo.jpg);
+}
+
+#dop {
+    background-image: url(../images/doplogo.png);
+}
+
+#minecraft {
+    background-image: url(../images/minecraftlogo.png);
+}
+
+#vrprototypes {
+    background-image: url(../images/wizard.png);
+}
+
+#megagame {
+    background-image: url(../images/wizard.png);
+}
+
+#trek {
+    background-image: url(../images/wizard.png);
+}
+
+#artifact {
+    background-image: url(../images/wizard.png);
+}
 
 
 #fragments
@@ -844,7 +872,6 @@ footer
 }
 
 
-
 .projectLink:hover{
 
     z-index: 1000;
@@ -953,3 +980,34 @@ footer
 
 }
 
+.project-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: initial;
+}
+.row-wrapper {
+    margin: 0;
+}
+.project-square {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.project-square img {
+    max-width: 100%;
+    object-fit: contain;
+}
+.project-square p{
+     text-align: center;
+}
+.project-square button{
+     align-self: center;
+     margin-top: 10px;
+     margin-bottom: 10px;
+}
+.footer-heading{
+    padding: 2vh;
+     text-align: center;
+}
